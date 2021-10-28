@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { NavLink, useHistory } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import "./Home.css";
 import facebook from '../components/static/facebook.svg';

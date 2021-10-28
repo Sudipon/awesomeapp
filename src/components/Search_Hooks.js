@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import NavigationBar from './NavigationBar';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import "./Home.css";
 import Table from 'react-bootstrap/Table';

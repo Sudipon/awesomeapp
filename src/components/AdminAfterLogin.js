@@ -1,7 +1,7 @@
 import React from 'react'
 import { Redirect } from "react-router-dom";
 import NavigationBar from './NavigationBar';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import "./Home.css";
 

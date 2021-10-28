@@ -5,7 +5,7 @@ import {useHistory } from 'react-router-dom';
 import { Navbar} from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import Modal from 'react-bootstrap/Modal';
 import './Navbar.css';
 import "./Home.css";

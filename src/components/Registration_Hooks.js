@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
 import "./Home.css";
 import { Link } from 'react-router-dom';
