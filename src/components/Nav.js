@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete, { createFilterOptions } from '@material-ui/lab/Autocomplete';
 import './Navbar.css';
 import "./Home.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '// import 'bootstrap/dist/css/bootstrap.css';';
 
 
 function Nav(){
