@@ -1,0 +1,65 @@
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+    top: 13px;
+  }
+
+  .img-fluid{
+    border-top-left-radius : .25rem;
+    border-bottom-left-radius : .25rem;
+  }
+
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.gradient-custom-4 {
+  /* fallback for old browsers */
+  background: #84fab0;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1))
+}
+
+
+
+
+
+body{
+    background-color: white;
+    background-image: none !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.what{
+    text-justify: auto;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1cm;
+    padding-top: 100px;
+
+}
+
+.search{
+    text-justify: auto;
+    text-align: center !important;
+}
+
+.font{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 0.5cm;
+}
+.navbar-brand{
+    font-size: 0.8cm;
+}

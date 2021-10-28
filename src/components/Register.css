@@ -1,0 +1,39 @@
+table.center {
+    margin-left: auto; 
+    margin-right: auto;
+      }
+  
+/* body {
+      color: Blue;
+      background-image: url('../components/static/Dream.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+      background-size: cover;
+      text-align: center;
+      padding: 140px;
+       padding-right: 600px; 
+      } */
+
+      div.register{
+                  font-family: 'Times New Roman', Times, serif;
+                  color: Blue;
+                  /* background-image: url('../components/static/log.jpeg');
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;  
+                  background-size: cover;
+                  text-align: center;
+                  padding: 140px;
+                  height: 100vh;
+                  padding-top: 70px;
+                  padding-right: 50px; */
+      }
+
+.registerForm{
+      padding-top: 0.5px;
+      }
+
+      .formCenter {
+            margin-bottom: 100px;
+          }

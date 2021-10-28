@@ -1,0 +1,38 @@
+.file{
+    text-justify: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 00.5cm;
+}
+
+.pro{
+    text-justify: auto;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1cm;
+    padding-top: 40px;
+
+}
+
+.column {
+    float: right;
+    width: 33.33%;
+    padding: 40px;
+    height: 100%; 
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    padding-top: 100px;
+  }
+  .left {
+    width: 20%;
+  }
+  .right{
+      width:30%;
+  }
+  
+  .middle {
+    width: 50%;
+  }
