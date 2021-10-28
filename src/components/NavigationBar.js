@@ -178,7 +178,7 @@ function NavigationBar() {
   else {
     return (
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem', fontSize: '30px'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
           <Nav className="me-auto" style={{marginLeft: '2rem'}}>
