@@ -69,7 +69,7 @@ function ManageEmp() {
 
   if (status === true) {
     return (
-      <div className="font"><center>
+      <div><center>
         <NavigationBar />
         <br />
         <h1>EMPLOYEE DETAILS</h1><br />
