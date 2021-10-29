@@ -28,14 +28,14 @@ function ManageEmp() {
       console.log(index)
       return (
         <tr key={index}>
-          <td>{currentrow.empname}</td>
-          <td><img src={currentrow.img_path} /></td>
-          <td>{currentrow.empemail}</td>
-          <td>{currentrow.empmobile}</td>
-          <td>{currentrow.empdob}</td>
-          <td>{currentrow.empgender}</td>
-          <td>{currentrow.empcountry}</td>
-          <td>{currentrow.empaddress}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empname}</td>
+          <td style={{fontSize: '18px'}}><img src={currentrow.img_path} /></td>
+          <td style={{fontSize: '18px'}}>{currentrow.empemail}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empmobile}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empdob}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empgender}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empcountry}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empaddress}</td>
           <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
           <td><button onClick={() => updateRow(index)} className="btn btn-primary" style={{fontSize: '18px'}}>Update</button></td>
         </tr>
@@ -69,7 +69,7 @@ function ManageEmp() {
 
   if (status === true) {
     return (
-      <div><center>
+      <div className="font"><center>
         <NavigationBar />
         <br />
         <h1>EMPLOYEE DETAILS</h1><br />
