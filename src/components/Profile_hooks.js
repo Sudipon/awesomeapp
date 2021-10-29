@@ -11,7 +11,7 @@ function Update() {
 
   return (
     <>
-      <Button variant="primary" onClick={() => setModalShow(true)}>
+      <Button variant="primary" onClick={() => setModalShow(true)} style={{fontSize: '18px'}}>
         Update Your Profile
       </Button>
 
@@ -175,8 +175,8 @@ function Profile(props) {
       // console.log(index)
       return (
         <tr key={index}>
-          <td>{currentrow.empquestion} </td>
-          <td>{currentrow.regdatetime} </td>
+          <td style={{fontSize: '18px'}}>{currentrow.empquestion} </td>
+          <td style={{fontSize: '18px'}}>{currentrow.regdatetime} </td>
         </tr>
       )
     })
@@ -188,7 +188,7 @@ function Profile(props) {
       <NavigationBar />
       <br />
       <Row className="d-flex justify-content-center py-3">
-        <h3 style={{ backgroundColor: "", color: "grey" }} className="d-flex justify-content-center w-100 " >My Profile</h3>
+        <h1 className="d-flex justify-content-center w-100 " >My Profile</h1>
       </Row>
       <Row>
         <Col>
@@ -198,35 +198,35 @@ function Profile(props) {
                 <form onSubmit={handleSubmit}>
                   <div className="form-group">
                     {/* <label>Name:</label>       */}
-                    <input type="name" className=" form-control form-round" value={name} />
+                    <input type="name" className=" form-control form-round" value={name} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Email:</label> */}
-                    <input type="email" className=" form-control form-round" value={email} />
+                    <input type="email" className=" form-control form-round" value={email} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="number" className=" form-control form-round" value={mobile} />
+                    <input type="number" className=" form-control form-round" value={mobile} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={dob} />
+                    <input type="text" className=" form-control form-round" value={dob} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={pass} />
+                    <input type="text" className=" form-control form-round" value={pass} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={gender} />
+                    <input type="text" className=" form-control form-round" value={gender} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={country} />
+                    <input type="text" className=" form-control form-round" value={country} style={{fontSize: '20px'}}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={address} />
+                    <input type="text" className=" form-control form-round" value={address} style={{fontSize: '20px'}}/>
                   </div>
                   <Update />
 
@@ -238,14 +238,14 @@ function Profile(props) {
         </Col>
         <Col>
           <Row className="d-flex justify-content-center py-3">
-            <h3 style={{ backgroundColor: "", color: "grey" }} className="d-flex justify-content-center w-100 " >All Uploaded Questions</h3>
+            <h1 className="d-flex justify-content-center w-100 " >All Uploaded Questions</h1>
           </Row>
           <Row>
             <Table responsive="sm" striped bordered hover>
               <thead>
                 <tr>
-                  <th>Questions</th>
-                  <th>Registration Time</th>
+                  <th style={{fontSize: '18px'}}>Questions</th>
+                  <th style={{fontSize: '18px'}}>Registration Time</th>
                 </tr>
               </thead>
 

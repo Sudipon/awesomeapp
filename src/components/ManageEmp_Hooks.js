@@ -36,8 +36,8 @@ function ManageEmp() {
           <td>{currentrow.empgender}</td>
           <td>{currentrow.empcountry}</td>
           <td>{currentrow.empaddress}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
-          <td><button onClick={() => updateRow(index)} className="btn btn-primary">Update</button></td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
+          <td><button onClick={() => updateRow(index)} className="btn btn-primary" style={{fontSize: '18px'}}>Update</button></td>
         </tr>
       )
     })
@@ -69,22 +69,22 @@ function ManageEmp() {
 
   if (status === true) {
     return (
-      <div><center>
+      <div className="font"><center>
         <NavigationBar />
         <br />
-        <h3>EMPLOYEE DETAILS</h3>
+        <h1>EMPLOYEE DETAILS</h1><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Photo</th>
-              <th>Email</th>
-              <th>Mobile</th>
-              <th>DOB</th>
-              <th>Gender</th>
-              <th>Country</th>
-              <th>Address</th>
+              <th style={{fontSize: '18px'}}>Name</th>
+              <th style={{fontSize: '18px'}}>Images</th>
+              <th style={{fontSize: '18px'}}>Email</th>
+              <th style={{fontSize: '18px'}}>Mobile</th>
+              <th style={{fontSize: '18px'}}>DOB</th>
+              <th style={{fontSize: '18px'}}>Gender</th>
+              <th style={{fontSize: '18px'}}>Country</th>
+              <th style={{fontSize: '18px'}}>Address</th>
             </tr>
           </thead>
 

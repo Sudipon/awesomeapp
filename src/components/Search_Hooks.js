@@ -53,10 +53,10 @@ function viewquestions() {
     // console.log(index)
       return (
           <tr key={index}>
-              <td>{currentrow.empquestion} </td>
-              <td>{currentrow.empanswer} </td>
-              <td>{currentrow.regdatetime} </td>
-              <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
+              <td style={{fontSize: '18px'}}>{currentrow.empquestion} </td>
+              <td style={{fontSize: '18px'}}>{currentrow.empanswer} </td>
+              <td style={{fontSize: '18px'}}>{currentrow.regdatetime} </td>
+              <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
           </tr>
       )
   })
@@ -66,14 +66,14 @@ function viewquestions() {
     return emplist.map((currentrow, index) => {
       return (
         <tr key={index}>
-          <td>{currentrow.empname}</td>
-          <td>{currentrow.empemail}</td>
-          <td>{currentrow.empmobile}</td>
-          <td>{currentrow.empdob}</td>
-          <td>{currentrow.empgender}</td>
-          <td>{currentrow.empcountry}</td>
-          <td>{currentrow.empaddress}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
+          <td style={{fontSize: '18px'}}>{currentrow.empname}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empemail}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empmobile}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empdob}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empgender}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empcountry}</td>
+          <td style={{fontSize: '18px'}}>{currentrow.empaddress}</td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
           
         </tr>
       );
@@ -98,10 +98,11 @@ function viewquestions() {
 
 
   if (status === false) {
-    return (<div><center>
+    return (
+    <div className="font"><center>
       <NavigationBar />
       <br />
-      <h3>ENTER EMAIL ID FOR SEARCH</h3>
+      <h1>ENTER EMAIL ID FOR SEARCH</h1><br />
       <b style={{ color: "red" }}>{msg}</b>
       <Card border="dark" style={{ width: '30rem', backgroundColor: 'Grey' }}>
             <Card.Body>
@@ -109,61 +110,46 @@ function viewquestions() {
         <input type="email" value={eemail} className="form-control "
           onChange={onChangeEmpEmail}
           placeholder="EMAIL ID"
-          required />
+          required style={{fontSize: '18px'}}/>
         <br />
-        <br />
-        <input type="submit" value="SEARCH EMPLOYEE" className="btn btn-success" />
+        <input type="submit" value="SEARCH EMPLOYEE" className="btn btn-success" style={{fontSize: '18px'}}/>
       </form>
       </Card.Body>
       </Card>
       </center>
-    </div>);
+    </div>
+    );
   }
   else {
     return (
-      <div><center>
+      <div className="font"><center>
         <NavigationBar />
         <br />
-        <h3>ENTER EMAIL ID FOR SEARCH</h3>
-        <b>{msg}</b>
-        <Card border="dark" style={{ width: '30rem', backgroundColor: 'Grey' }}>
-            <Card.Body>
-        <form onSubmit={handleSubmit}>
-          <input type="email" value={eemail} className="form-control "
-            onChange={onChangeEmpEmail} placeholder="EMAIL ID"
-            required />
-          <br />
-          <br />
-          <input type="submit" value="SEARCH EMPLOYEE" />
-        </form>
-        </Card.Body>
-        </Card>
-        <br /><br />
 
-        <h3>EMPLOYEE DETAILS</h3>
+        <h1>EMPLOYEE DETAILS</h1><br />
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Mobile</th>
-              <th>DOB</th>
-              <th>Gender</th>
-              <th>Country</th>
-              <th>Address</th>
+              <th style={{fontSize: '18px'}}>Name</th>
+              <th style={{fontSize: '18px'}}>Email</th>
+              <th style={{fontSize: '18px'}}>Mobile</th>
+              <th style={{fontSize: '18px'}}>DOB</th>
+              <th style={{fontSize: '18px'}}>Gender</th>
+              <th style={{fontSize: '18px'}}>Country</th>
+              <th style={{fontSize: '18px'}}>Address</th>
             </tr>
           </thead>
 
           <tbody>
             {viewEmpList()}
           </tbody>
-        </Table>
+        </Table><br />
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-            <th>Questions</th>
-            <th>Answers</th>
-            <th>Registration Time</th>
+            <th style={{fontSize: '18px'}}>Questions</th>
+            <th style={{fontSize: '18px'}}>Answers</th>
+            <th style={{fontSize: '18px'}}>Registration Time</th>
             </tr>
           </thead>
 
