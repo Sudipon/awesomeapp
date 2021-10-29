@@ -38,35 +38,15 @@ function AdminLoginHooks(props) {
   return (
     <div className="font"><center>
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem', fontSize: '35px', paddingTop: '15px' }}><b><i>Question</i></b></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+          <Nav className="me-auto" style={{ marginLeft: '2rem', fontSize: '2rem' }} >
             <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      {/*       
-      <h3>ADMIN LOGIN</h3>
-      <b style={{ color: "red" }}>{msg}</b>
-      <Card border="dark" style={{ width: '30rem', backgroundColor: 'Grey' }}>
-            <Card.Body>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={adminuserid} className="form-control "
-          onChange={onChangeAdminUserId} placeholder="ADMIN USER ID"
-          required  />
-        <br />
-        <br />
-        <input type="password" value={adminpassword} className="form-control "
-          onChange={(e) => setAdminPassword(e.target.value)} placeholder="ADMIN PASSWORD"
-          required />
-        <br />
-        <br />
-        <input type="submit" value="ADMIN LOGIN" className="btn btn-success"  />
-      </form>
-      </Card.Body>
-      </Card> */}
       <section className="vh-100">
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -75,21 +55,21 @@ function AdminLoginHooks(props) {
                 alt="Sample image" />
             </div>
             <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-              <h3>Admin Login</h3><br />
+              <h1>Admin Login</h1><br />
               <form onSubmit={handleSubmit}>
                 <div className="form-outline mb-4">
-                  <input type="text" className="form-control form-control-lg"
+                  <input type="text" className="form-control form-control-lg" style={{fontSize: '18px'}}
                     onChange={onChangeAdminUserId} value={adminuserid} placeholder="Admin User Id" />
                 </div>
 
                 <div className="form-outline mb-3">
-                  <input type="password" className="form-control form-control-lg"
+                  <input type="password" className="form-control form-control-lg" style={{fontSize: '18px'}}
                     value={adminpassword} onChange={(e) => setAdminPassword(e.target.value)} placeholder="Admin password" />
                 </div>
 
                 <div className="text-center text-lg-start mt-4 pt-2">
-                  <input type="submit" className="btn btn-primary btn-lg"
-                    style={{ paddingleft: '2.5rem', paddingright: '2.5rem' }} value="Admin Login" />
+                  <input type="submit" className="btn btn-primary btn-lg" 
+                    style={{ paddingleft: '2.5rem', paddingright: '2.5rem', fontSize: '18px' }} value="Admin Login" />
                 </div>
 
               </form>

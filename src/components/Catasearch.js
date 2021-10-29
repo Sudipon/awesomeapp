@@ -114,9 +114,9 @@ function Catasearch(props) {
                         <form onSubmit={handleSubmit}>
                             <input type="search" value={ecat} className="form-control "
                                 onChange={onChangeCat} placeholder="Search Food, Politics, Nature, Programming, Intelligence " style={{width: '50rem'}}
-                                required />
+                                required style={{fontSize: '18px', width: '60rem'}}/>
                                 <br />
-                            <input type="submit" value="SEARCH  " style={{width: '20rem'}}/>
+                            <input type="submit" value="SEARCH  " style={{width: '20rem',fontSize: '18px'}}/>
                         
                         </form>
                         </center>

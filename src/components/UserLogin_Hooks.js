@@ -78,28 +78,28 @@ function UserLogin(props) {
               <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.svg" className="img-fluid" alt="Phone image" />
             </div>
             <div className="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-              <h3>Login</h3><br />
+              <h1>Login</h1><br />
               <form onSubmit={handleSubmit}>
                 <div className="form-outline mb-4">
-                  <input type="email" className="form-control form-control-lg"
+                  <input type="email" className="form-control form-control-lg" style={{fontSize: '18px'}}
                    onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Email Address"/>
                 </div>
 
                 <div className="form-outline mb-4">
-                  <input type="password" class="form-control form-control-lg" 
+                  <input type="password" class="form-control form-control-lg" style={{fontSize: '18px'}}
                   onChange={onChangeEmpPass} value={epass} placeholder="Enter Password"/>
                 </div>
 
-                <input type="submit" className="btn btn-primary btn-lg btn-block" value="Sign in"/>
+                <input type="submit" className="btn btn-primary btn-lg btn-block" style={{fontSize: '18px'}} value="Sign in"/>
 
                 <div className="divider d-flex align-items-center my-4">
                   <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
                 </div>
 
-                <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor: '#3b5998'}} href="#!" role="button">
+                <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor: '#3b5998', fontSize: '18px'}} href="#!" role="button">
                   <img src={facebook} width={35}/>Continue with Facebook
           </a>
-                <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor: '#55acee'}} href="#!" role="button">
+                <a className="btn btn-primary btn-lg btn-block" style={{backgroundColor: '#55acee', fontSize: '18px'}} href="#!" role="button">
                 <img src={twitter} width={35}/>Continue with Twitter</a>
 
               </form>

@@ -16,8 +16,8 @@ function AdminAfterLogin() {
       <div className="font"><center>
         <NavigationBar />
         <br />
-        <h3>WELCOME ADMIN</h3>
-        <h3>THIS IS ADMIN DASH BOARD</h3>
+        <h1>WELCOME ADMIN</h1>
+        <h2>THIS IS ADMIN DASH BOARD</h2>
         </center>
       </div>
     )

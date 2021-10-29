@@ -102,10 +102,10 @@ function NavigationBar() {
     return (
       <>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand as={Link} to="/adminafterlogin">ADMIN HOME</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/adminafterlogin" style={{fontSize: '30px', paddingTop: '15px'}}>ADMIN HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto" >
+            <Nav className="me-auto" style={{ marginLeft: '2rem', fontSize: '2rem' }}>
               <Nav.Link as={Link} to="/search">SEARCH</Nav.Link>
               <Nav.Link as={Link} to="/manageemp">EMPLOYEES</Nav.Link>
               <Nav.Link as={Link} to="/managemes">MESSAGES</Nav.Link>
@@ -126,10 +126,10 @@ function NavigationBar() {
     return (
       
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem', fontSize: '35px', paddingTop: '15px'}}><b><i>Question</i></b></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{marginLeft: '2rem'}} >
+          <Nav className="me-auto" style={{marginLeft: '2rem', fontSize: '2rem'}} >
             <Nav.Link as={Link} to="/about" style={{color: 'Blue'}}>About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact" style={{color: 'Blue'}}>Contact Us</Nav.Link>
             <Nav.Link as={Link} to="/profile" style={{color: 'Blue'}}>Profile</Nav.Link>
@@ -138,50 +138,15 @@ function NavigationBar() {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      // <div className="bod">
-      //   <nav className="navbar navbar-expand-lg">
-      //     <div className="container">
-      //       <NavLink className="navbar-brand" to="/"><h1><b><i>Questions</i></b><em></em></h1></NavLink>
-      //       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      //         <span className="navbar-toggler-icon"></span>
-      //       </button>
-      //       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      //       <Navbar.Collapse id="responsive-navbar-nav">
-      //         <div className="collapse navbar-collapse" id="navbarResponsive">
-      //           <ul className="navbar-nav ml-auto">
-      //             <li className="nav-item active">
-      //               <h5 className="nav-link">{name}</h5>
-      //             </li>
-      //             <li className="nav-item">
-      //               <NavLink className="nav-link" to="/about">About Us</NavLink>
-      //             </li>
-      //             <li className="nav-item active">
-      //               <NavLink className="nav-link" to="/contact">Contact Us</NavLink>
-      //             </li>
-      //             <li className="nav-item active">
-      //               <NavLink className="nav-link" to="/profile">Profile</NavLink>
-      //             </li>
-      //             <li className="nav-item active">
-      //               <Addquestion />
-      //             </li>
-      //             <li className="nav-item active">
-      //               <NavLink className="nav-link" to="/logout">Logout </NavLink>
-      //             </li>
-      //           </ul>
-      //         </div>
-      //       </Navbar.Collapse>
-      //     </div>
-      //   </nav>
-      // </div>
     )
   }
   else {
     return (
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem', fontSize: '30px'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem', fontSize: '35px', paddingTop: '15px'}}><b><i>Question</i></b></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{marginLeft: '2rem'}}>
+          <Nav className="me-auto" style={{marginLeft: '2rem', fontSize: '2rem'}}>
             <Nav.Link as={Link} to="/about" style={{color: 'Blue'}} >About Us</Nav.Link>
             <Nav.Link as={Link} to="/contact" style={{color: 'Blue'}}>Contact Us</Nav.Link>
             <div className="dropdown">

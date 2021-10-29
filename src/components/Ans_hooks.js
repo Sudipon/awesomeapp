@@ -114,32 +114,32 @@ function Ans(props) {
 
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
-                                                            <input type="text" className="form-control" value={name} disabled />                                                        </div>
+                                                            <input type="text" className="form-control" value={name} disabled style={{fontSize: '18px'}}/>                                                        </div>
                                                     </div>
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
-                                                            <input type="email" className="form-control" value={email} disabled />
+                                                            <input type="email" className="form-control" value={email} disabled style={{fontSize: '18px'}}/>
                                                         </div>
                                                     </div>
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
-                                                            <textarea type="text" className="form-control" value={que} disabled></textarea>
+                                                            <textarea type="text" className="form-control" value={que} disabled style={{fontSize: '18px'}}></textarea>
                                                         </div>
                                                     </div>
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
-                                                            <input type="file" className="form-control" placeholder="Image link" onChange={handleImage} />
+                                                            <input type="file" className="form-control" placeholder="Image link" onChange={handleImage} style={{fontSize: '18px'}}/>
                                                         </div>
                                                     </div>
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
-                                                            <textarea type="text" className="form-control" value={eanswer} placeholder="Enter Your Answer"
+                                                            <textarea type="text" className="form-control" value={eanswer} placeholder="Enter Your Answer" style={{fontSize: '18px'}}
                                                                 onChange={onChangeEmpAnswer} ></textarea>
                                                         </div>
                                                     </div>
 
                                                     <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                        <input type="submit" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body" value="Post" />
+                                                        <input type="submit" className="btn btn-success btn-block btn-lg gradient-custom-4 text-body" value="Post" style={{fontSize: '18px'}}/>
                                                     </div>
 
                                                 </form>

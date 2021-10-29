@@ -111,61 +111,61 @@ function Registration() {
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
                         <div className="col">
-                            <div className="card card-registration my-4">
-                                <div className="row g-0">
-                                    <div className="col-xl-6 d-none d-xl-block">
+                            <div className="card card-registration my-4" >
+                                <div className="row g-0" >
+                                    <div className="col-xl-6 d-none d-xl-block" >
                                         <img
                                             src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img4.jpg"
                                             alt="Sample photo"
-                                            className="img-fluid"
+                                            className="img-fluid" style={{height: '65rem', width: '65rem'}}
                                         />
                                     </div>
                                     <div className="col-xl-6">
                                         <div className="card-body p-md-5 text-black">
-                                            <h3 className="mb-5 text-uppercase">Registration form</h3>
+                                            <h1 className="mb-5 text-uppercase" >Registration form</h1>
                                             <form onSubmit={handleSubmit}>
                                                 <div className="form-outline mb-4">
-                                                    <input type="file" className="form-control" placeholder="Image link" onChange={handleImage} />
+                                                    <input type="file" className="form-control" placeholder="Image link" onChange={handleImage} style={{fontSize: '18px'}}/>
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Your Name" required />
+                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Your Name" required style={{fontSize: '18px'}}/>
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="email" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Your Email Id" required />
+                                                        onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Your Email Id" required style={{fontSize: '18px'}}/>
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="number" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpMobile} value={emobile} placeholder="Enter Your Mobile Number" required />
+                                                        onChange={onChangeEmpMobile} value={emobile} placeholder="Enter Your Mobile Number" required style={{fontSize: '18px'}}/>
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="password" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpPass} value={epass} placeholder="Enter Your Password" required />
+                                                        onChange={onChangeEmpPass} value={epass} placeholder="Enter Your Password" required style={{fontSize: '18px'}}/>
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="date" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpDOB} value={edob} placeholder="Enter Your Date of Birth" required />
+                                                        onChange={onChangeEmpDOB} value={edob} placeholder="Enter Your Date of Birth" required style={{fontSize: '18px'}}/>
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpGender} value={egender} placeholder="Enter Your Gender" required />
+                                                        onChange={onChangeEmpGender} value={egender} placeholder="Enter Your Gender" required style={{fontSize: '18px'}}/>
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpCountry} value={ecountry} placeholder="Enter Your Country" required />
+                                                        onChange={onChangeEmpCountry} value={ecountry} placeholder="Enter Your Country" required style={{fontSize: '18px'}}/>
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpAddress} value={eaddress} placeholder="Enter Your Address" required />
+                                                        onChange={onChangeEmpAddress} value={eaddress} placeholder="Enter Your Address" required style={{fontSize: '18px'}}/>
                                                 </div>
 
                                                 <div className="d-flex justify-content-end pt-3">
-                                                    <input type="submit" value="REGISTER" className="btn btn-success" />
+                                                    <input type="submit" value="REGISTER" className="btn btn-success" style={{fontSize: '18px'}}/>
                                                 </div>
                                             </form>
                                         </div>
