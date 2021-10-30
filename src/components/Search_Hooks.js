@@ -66,14 +66,14 @@ function viewquestions() {
     return emplist.map((currentrow, index) => {
       return (
         <tr key={index}>
-          <td style={{fontSize: '18px'}}>{currentrow.empname}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empemail}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empmobile}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empdob}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empgender}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empcountry}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empaddress}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
+          <td>{currentrow.empname}</td>
+          <td>{currentrow.empemail}</td>
+          <td>{currentrow.empmobile}</td>
+          <td>{currentrow.empdob}</td>
+          <td>{currentrow.empgender}</td>
+          <td>{currentrow.empcountry}</td>
+          <td>{currentrow.empaddress}</td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
           
         </tr>
       );
@@ -102,7 +102,7 @@ function viewquestions() {
     <div className="font"><center>
       <NavigationBar />
       <br />
-      <h1>ENTER EMAIL ID FOR SEARCH</h1><br />
+      <h3>ENTER EMAIL ID FOR SEARCH</h3><br />
       <b style={{ color: "red" }}>{msg}</b>
       <Card border="dark" style={{ width: '30rem', backgroundColor: 'Grey' }}>
             <Card.Body>
@@ -110,9 +110,9 @@ function viewquestions() {
         <input type="email" value={eemail} className="form-control "
           onChange={onChangeEmpEmail}
           placeholder="EMAIL ID"
-          required style={{fontSize: '18px'}}/>
+          required/>
         <br />
-        <input type="submit" value="SEARCH EMPLOYEE" className="btn btn-success" style={{fontSize: '18px'}}/>
+        <input type="submit" value="SEARCH EMPLOYEE" className="btn btn-success"/>
       </form>
       </Card.Body>
       </Card>
@@ -126,17 +126,17 @@ function viewquestions() {
         <NavigationBar />
         <br />
 
-        <h1>EMPLOYEE DETAILS</h1><br />
+        <h3>EMPLOYEE DETAILS</h3><br />
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th style={{fontSize: '18px'}}>Name</th>
-              <th style={{fontSize: '18px'}}>Email</th>
-              <th style={{fontSize: '18px'}}>Mobile</th>
-              <th style={{fontSize: '18px'}}>DOB</th>
-              <th style={{fontSize: '18px'}}>Gender</th>
-              <th style={{fontSize: '18px'}}>Country</th>
-              <th style={{fontSize: '18px'}}>Address</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>DOB</th>
+              <th>Gender</th>
+              <th>Country</th>
+              <th>Address</th>
             </tr>
           </thead>
 
@@ -147,9 +147,9 @@ function viewquestions() {
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-            <th style={{fontSize: '18px'}}>Questions</th>
-            <th style={{fontSize: '18px'}}>Answers</th>
-            <th style={{fontSize: '18px'}}>Registration Time</th>
+            <th>Questions</th>
+            <th>Answers</th>
+            <th>Registration Time</th>
             </tr>
           </thead>
 

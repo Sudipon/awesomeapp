@@ -28,16 +28,16 @@ function ManageEmp() {
       console.log(index)
       return (
         <tr key={index}>
-          <td style={{fontSize: '18px'}}>{currentrow.empname}</td>
-          <td style={{fontSize: '18px'}}><img src={currentrow.img_path} /></td>
-          <td style={{fontSize: '18px'}}>{currentrow.empemail}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empmobile}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empdob}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empgender}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empcountry}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empaddress}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
-          <td><button onClick={() => updateRow(index)} className="btn btn-primary" style={{fontSize: '18px'}}>Update</button></td>
+          <td >{currentrow.empname}</td>
+          <td><img src={currentrow.img_path} /></td>
+          <td>{currentrow.empemail}</td>
+          <td>{currentrow.empmobile}</td>
+          <td>{currentrow.empdob}</td>
+          <td>{currentrow.empgender}</td>
+          <td>{currentrow.empcountry}</td>
+          <td>{currentrow.empaddress}</td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
+          <td><button onClick={() => updateRow(index)} className="btn btn-primary">Update</button></td>
         </tr>
       )
     })
@@ -72,19 +72,19 @@ function ManageEmp() {
       <div className="font"><center>
         <NavigationBar />
         <br />
-        <h1>EMPLOYEE DETAILS</h1><br />
+        <h3>EMPLOYEE DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th style={{fontSize: '18px'}}>Name</th>
-              <th style={{fontSize: '18px'}}>Images</th>
-              <th style={{fontSize: '18px'}}>Email</th>
-              <th style={{fontSize: '18px'}}>Mobile</th>
-              <th style={{fontSize: '18px'}}>DOB</th>
-              <th style={{fontSize: '18px'}}>Gender</th>
-              <th style={{fontSize: '18px'}}>Country</th>
-              <th style={{fontSize: '18px'}}>Address</th>
+              <th>Name</th>
+              <th>Images</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>DOB</th>
+              <th>Gender</th>
+              <th>Country</th>
+              <th>Address</th>
             </tr>
           </thead>
 

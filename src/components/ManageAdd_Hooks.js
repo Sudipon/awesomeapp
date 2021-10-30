@@ -30,7 +30,7 @@ function ManageAdd() {
           <td>{currentrow.empcatagory}</td>
           <td>{currentrow.empquestion}</td>
           <td>{currentrow.regdatetime}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
         </tr>
       )
     })
@@ -57,15 +57,15 @@ function ManageAdd() {
       <div className="font"><center>
         <NavigationBar />
         <br />
-        <h1>QUESTIONS DETAILS</h1><br />
+        <h3>QUESTIONS DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th style={{fontSize: '18px'}}>Email</th>
-              <th style={{fontSize: '18px'}}>Catagory</th>
-              <th style={{fontSize: '18px'}}>Question</th>
-              <th style={{fontSize: '18px'}}>Registration Time</th>
+              <th>Email</th>
+              <th>Catagory</th>
+              <th>Question</th>
+              <th>Registration Time</th>
             </tr>
           </thead>
 

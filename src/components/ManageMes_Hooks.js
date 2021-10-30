@@ -28,12 +28,12 @@ function ManageMes() {
       console.log(index)
       return (
         <tr key={index}>
-          <td style={{fontSize: '18px'}}>{currentrow.empname}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empemail}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empsubject}</td>
-          <td style={{fontSize: '18px'}}>{currentrow.empmessage}</td>
-          <td><a className="mailto" href="mailto:{currentrow.empemail}" className="btn btn-success" style={{fontSize: '18px'}}>Mail</a></td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
+          <td>{currentrow.empname}</td>
+          <td>{currentrow.empemail}</td>
+          <td>{currentrow.empsubject}</td>
+          <td>{currentrow.empmessage}</td>
+          <td><a className="mailto" href="mailto:{currentrow.empemail}" className="btn btn-success">Mail</a></td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
         </tr>
       )
     })
@@ -60,15 +60,15 @@ function ManageMes() {
       <div className="font"><center>
         <NavigationBar />
         <br />
-        <h1>EMPLOYEE DETAILS</h1><br />
+        <h3>EMPLOYEE DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th style={{fontSize: '18px'}}>Name</th>
-              <th style={{fontSize: '18px'}}>Email</th>
-              <th style={{fontSize: '18px'}}>Subject</th>
-              <th style={{fontSize: '18px'}}>Message</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Subject</th>
+              <th>Message</th>
             </tr>
           </thead>
 

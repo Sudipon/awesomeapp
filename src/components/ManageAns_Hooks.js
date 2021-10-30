@@ -31,7 +31,7 @@ function ManageAns() {
           <td>{currentrow.empanswer}</td>
           <td><img src={currentrow.img_path} /></td>
           <td>{currentrow.regdatetime}</td>
-          <td><button onClick={() => removeRow(index)} className="btn btn-danger" style={{fontSize: '18px'}}>Delete</button></td>
+          <td><button onClick={() => removeRow(index)} className="btn btn-danger">Delete</button></td>
         </tr>
       )
     })
@@ -58,16 +58,16 @@ function ManageAns() {
       <div className="font"><center>
         <NavigationBar />
         <br />
-        <h1>ANSWERS DETAILS</h1><br />
+        <h3>ANSWERS DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>
           <thead>
             <tr>
-              <th style={{fontSize: '18px'}}>Email</th>
-              <th style={{fontSize: '18px'}}>Question</th>
-              <th style={{fontSize: '18px'}}>Answers</th>
-              <th style={{fontSize: '18px'}}>Images</th>
-              <th style={{fontSize: '18px'}}>Registration Time</th>
+              <th>Email</th>
+              <th>Question</th>
+              <th>Answers</th>
+              <th>Images</th>
+              <th>Registration Time</th>
             </tr>
           </thead>
 

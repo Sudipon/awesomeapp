@@ -98,23 +98,23 @@ function UpdateProfile(props) {
             <div className="form-group">
               <input type="text" value={ename} disabled className="form-control " />
             </div>
-            <br />
+            
             <div className="form-group">
               <input type="email" value={eemail} disabled className="form-control" />
             </div>
-            <br />
+            
             <div className="form-group">
               <input type="number" value={emobile} className="form-control"
                 onChange={onChangeEmpMobile} placeholder="Enter Mobile No"
                 required />
             </div>
-            <br />
+            
             <div className="form-group">
               <input type="password" value={epass} className="form-control"
                 onChange={onChangeEmpPass} placeholder="Enter Password"
                 required />
             </div>
-            <br />
+            
             <input type="submit" className="btn btn-success" value="Update" onClick={props.onHide} />
           </form>
         </Modal.Body>
@@ -176,8 +176,8 @@ function Profile(props) {
       // console.log(index)
       return (
         <tr key={index}>
-          <td style={{fontSize: '18px'}}>{currentrow.empquestion} </td>
-          <td style={{fontSize: '18px'}}>{currentrow.regdatetime} </td>
+          <td>{currentrow.empquestion} </td>
+          <td>{currentrow.regdatetime} </td>
         </tr>
       )
     })
@@ -189,7 +189,7 @@ function Profile(props) {
       <NavigationBar />
       <br />
       <Row className="d-flex justify-content-center py-3">
-        <h1 className="d-flex justify-content-center w-100 " >My Profile</h1>
+        <h3 className="d-flex justify-content-center w-100 " >My Profile</h3>
       </Row>
       <Row>
         <Col>
@@ -199,35 +199,35 @@ function Profile(props) {
                 <form onSubmit={handleSubmit}>
                   <div className="form-group">
                     {/* <label>Name:</label>       */}
-                    <input type="name" className=" form-control form-round" value={name} style={{fontSize: '20px'}}/>
+                    <input type="name" className=" form-control form-round" value={name}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Email:</label> */}
-                    <input type="email" className=" form-control form-round" value={email} style={{fontSize: '20px'}}/>
+                    <input type="email" className=" form-control form-round" value={email}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="number" className=" form-control form-round" value={mobile} style={{fontSize: '20px'}}/>
+                    <input type="number" className=" form-control form-round" value={mobile}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={dob} style={{fontSize: '20px'}}/>
+                    <input type="text" className=" form-control form-round" value={dob}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={pass} style={{fontSize: '20px'}}/>
+                    <input type="text" className=" form-control form-round" value={pass}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={gender} style={{fontSize: '20px'}}/>
+                    <input type="text" className=" form-control form-round" value={gender}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={country} style={{fontSize: '20px'}}/>
+                    <input type="text" className=" form-control form-round" value={country}/>
                   </div>
                   <div className="form-group">
                     {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={address} style={{fontSize: '20px'}}/>
+                    <input type="text" className=" form-control form-round" value={address}/>
                   </div>
                   <Update />
 
@@ -239,7 +239,7 @@ function Profile(props) {
         </Col>
         <Col>
           <Row className="d-flex justify-content-center py-3">
-            <h1 className="d-flex justify-content-center w-100 " >All Uploaded Questions</h1>
+            <h3 className="d-flex justify-content-center w-100 " >All Uploaded Questions</h3>
           </Row>
           <Row>
             <Table responsive="sm" striped bordered hover>

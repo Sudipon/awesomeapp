@@ -56,7 +56,7 @@ function Contact() {
       <NavigationBar />
       <div >
         <Row className="d-flex justify-content-center py-3">
-          <h1 className="d-flex justify-content-center w-100 " >Contact Us</h1>
+          <h3 className="d-flex justify-content-center w-100 " >Contact Us</h3>
         </Row>
         <Row>
           <Col>
@@ -67,25 +67,25 @@ function Contact() {
                     <div className="form-group">
 
                       <input type="name" className=" form-control form-round" placeholder="Enter Your Name" value={ename}
-                        onChange={onChangeEmpName} required style={{fontSize: '18px'}}/>
+                        onChange={onChangeEmpName} required />
                     </div>
                     <div className="form-group">
 
                       <input type="email" className=" form-control form-round" placeholder="Enter Your Email" value={eemail}
-                        onChange={onChangeEmpEmail} required style={{fontSize: '18px'}}/>
+                        onChange={onChangeEmpEmail} required />
                     </div>
                     <div className="form-group">
 
                       <input type="subject" className=" form-control form-round" placeholder="Enter Your Subject" value={esubject}
-                        onChange={onChangeEmpSubject} required style={{fontSize: '18px'}}/>
+                        onChange={onChangeEmpSubject} required />
                     </div>
                     <div className="form-group">
 
                       <textarea type="message" className=" form-control form-round" placeholder="Message" required rows="3" value={emessage}
-                        onChange={onChangeEmpMessage} style={{fontSize: '18px'}}>
+                        onChange={onChangeEmpMessage} >
                       </textarea>
                     </div>
-                    <input type="submit" className="btn btn-primary btn-block  form-round" value="Send Message" style={{fontSize: '18px'}}/>
+                    <input type="submit" className="btn btn-primary btn-block  form-round" value="Send Message" />
                   </form>
                 </div>
               </div><br />
@@ -97,12 +97,12 @@ function Contact() {
               <div className="container" >
                 <div className="card carddesign " style={{backgroundImage: 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)'}}>
                   <div className="p-4">
-                    <h2>College Contact:</h2>
-                    <h4>* Gargi Memorial Institute of Technology, Balarampur</h4>
+                    <h4>College Contact:</h4>
+                    <h6>* Gargi Memorial Institute of Technology, Balarampur</h6>
 
-                    <h4>* Baruipur, Kolkata - 700144</h4>
-                    <h4>* +91 33 2433-0113</h4>
-                    <h4>* +91 33 2701-7511</h4>
+                    <h6>* Baruipur, Kolkata - 700144</h6>
+                    <h6>* +91 33 2433-0113</h6>
+                    <h6>* +91 33 2701-7511</h6>
                   </div>
                 </div>
               </div>
@@ -112,11 +112,11 @@ function Contact() {
               <div className="container" >
                 <div className="card carddesign " style={{backgroundImage: 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)'}}>
                   <div className="p-4">
-                    <h2>City Office Contact:</h2>
-                    <h4>* 3, Suren Tagore Road</h4>
-                    <h4>* Kolkata - 700 019</h4>
-                    <h4>* +91 33 2440-6245</h4>
-                    <h4>* +91 33 2460-5124</h4>
+                    <h4>City Office Contact:</h4>
+                    <h6>* 3, Suren Tagore Road</h6>
+                    <h6>* Kolkata - 700 019</h6>
+                    <h6>* +91 33 2440-6245</h6>
+                    <h6>* +91 33 2460-5124</h6>
 
                   </div>
                 </div>
@@ -127,11 +127,9 @@ function Contact() {
               <div className="container" >
                 <div className="card carddesign " style={{backgroundImage: 'linear-gradient(red,yellow,green)'}}>
                   <div className="p-4">
-                    <h2>24 * 7 Help Line:</h2>
-                    <h4>* gsudipon@gmail.com</h4>
-                    <h4>* +91 9007969453</h4>
-
-
+                    <h4>24 * 7 Help Line:</h4>
+                    <h6>* gsudipon@gmail.com</h6>
+                    <h6>* +91 9007969453</h6>
                   </div>
                 </div>
               </div>
