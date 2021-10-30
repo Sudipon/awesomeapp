@@ -6,6 +6,7 @@ import './Navbar.css';
 import "./Home.css";
 import Table from 'react-bootstrap/Table';
 
+
 function Update() {
   const [modalShow, setModalShow] = React.useState(false);
 

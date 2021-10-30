@@ -9,7 +9,7 @@ import { Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
 
-function Registration() {
+function Registration(props) {
     let history = useHistory();
     const [ename, setEmpName] = useState("");
     const [eemail, setEmpEmail] = useState("");
