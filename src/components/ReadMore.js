@@ -39,8 +39,8 @@ function AnswerPanel(props) {
                             <Card className="gradient-custom-4">
                                 <Card.Body>
                                     {cr.empanswer}<br /><br />
-                                    <center><Card.Img style={{ minWidth: "0px", maxWidth: "700px", maxHeight: "500px" }} src={cr.img_path} /></center>
-                                    <small className="text-muted" style={{ position: 'absolute', right: '10px' }}>{cr.empemail}<SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{cr.createdAt}</SimpleDateTime></small>
+                                    <center><Card.Img style={{ minWidth: "0px", maxWidth: "700px", maxHeight: "700px", borderRadius: '30%' }} src={cr.img_path} /></center>
+                                    <small className="text-muted" style={{ position: 'absolute', right: '10px'}}>{cr.empemail}<SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{cr.createdAt}</SimpleDateTime></small>
                                 </Card.Body>
                             </Card>
                         </div>

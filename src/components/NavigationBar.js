@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom';
-import {useHistory } from 'react-router-dom';
-import { Navbar} from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 // import 'bootstrap/dist/css/bootstrap.css';
@@ -16,7 +16,7 @@ function Addquestion() {
 
   return (
     <>
-      <Link className="nav-link" style={{color: 'Blue'}} onClick={() => setModalShow(true)}>
+      <Link className="nav-link" style={{ color: 'Blue' }} onClick={() => setModalShow(true)}>
         Add Question
       </Link>
 
@@ -102,10 +102,10 @@ function NavigationBar() {
     return (
       <>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand as={Link} to="/adminafterlogin" style={{marginLeft: '1rem'}}>ADMIN HOME</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/adminafterlogin" style={{ marginLeft: '1rem' }}>ADMIN HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto" style={{ marginLeft: '2rem'}}>
+            <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
               <Nav.Link as={Link} to="/search">SEARCH</Nav.Link>
               <Nav.Link as={Link} to="/manageemp">EMPLOYEES</Nav.Link>
               <Nav.Link as={Link} to="/managemes">MESSAGES</Nav.Link>
@@ -124,17 +124,20 @@ function NavigationBar() {
     let name = sessionStorage.getItem('username')
     console.log(name)
     return (
-      
+
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{marginLeft: '2rem'}} >
-            <Nav.Link as={Link} to="/about" style={{color: 'Blue'}}>About Us</Nav.Link>
-            <Nav.Link as={Link} to="/contact" style={{color: 'Blue'}}>Contact Us</Nav.Link>
-            <Nav.Link as={Link} to="/profile" style={{color: 'Blue'}}>Profile</Nav.Link>
+          <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+            <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
+            <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+            <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
             <Addquestion />
-            <Nav.Link as={Link} to="/logout" style={{color: 'Blue'}}>Logout</Nav.Link>
+            <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
+          </Nav>
+          <Nav>
+            <h4 style={{ marginRight: '1rem' }}>{name}</h4>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -143,20 +146,20 @@ function NavigationBar() {
   else {
     return (
       <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+        <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{marginLeft: '2rem'}}>
-            <Nav.Link as={Link} to="/about" style={{color: 'Blue'}} >About Us</Nav.Link>
-            <Nav.Link as={Link} to="/contact" style={{color: 'Blue'}}>Contact Us</Nav.Link>
+          <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
+            <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
+            <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
             <div className="dropdown">
-              <Nav.Link className="dropbtn" style={{color: 'Blue'}}>User</Nav.Link>
+              <Nav.Link className="dropbtn" style={{ color: 'Blue' }}>User</Nav.Link>
               <div className="dropdown-content">
-                <Nav.Link as={Link} to="/userlogin" style={{color: 'Blue'}}>Login</Nav.Link>
-                <Nav.Link as={Link} to="/register" style={{color: 'Blue'}}>Register</Nav.Link>
+                <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
+                <Nav.Link as={Link} to="/register" style={{ color: 'Blue' }}>Register</Nav.Link>
               </div>
             </div>
-            <Nav.Link as={Link} to="/adminlogin" style={{color: 'Blue'}}>Admin</Nav.Link>
+            <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

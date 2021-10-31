@@ -7,18 +7,18 @@ import './Navbar.css';
 import "./Home.css";
 import Summer from '../components/static/Summer.png';
 import search2 from '../components/static/search2.svg';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+import { Modal, Button, Navbar, Form, FormControl, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
-import Nav from 'react-bootstrap/Nav';
 
 function Addquestion() {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <>
-      <Link className="nav-link" style={{color: 'Blue'}} onClick={() => setModalShow(true)}>
+      <Link className="nav-link" style={{ color: 'Blue' }} onClick={() => setModalShow(true)}>
         Add Question
       </Link>
 
@@ -111,16 +111,19 @@ function Home() {
     return (
       <div className="font">
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" >
-            <Nav className="me-auto" style={{ marginLeft: '2rem'}} >
-            <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30}/></Nav.Link>
+            <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+              <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
               <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
               <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
               <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
               <Addquestion />
               <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
+            </Nav>
+            <Nav>
+              <h4 style={{marginRight: '1rem'}}>{name}</h4>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
@@ -157,11 +160,11 @@ function Home() {
     return (
       <div className="font">
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
-            <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30}/></Nav.Link>
+              <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
               <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
               <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
               <div className="dropdown">
