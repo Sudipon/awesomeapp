@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Redirect } from "react-router-dom";
 import { Row, Col, Container, Card } from 'react-bootstrap';
 import NavigationBar from './NavigationBar';
 import './Navbar.css';
@@ -40,7 +41,7 @@ function AnswerPanel(props) {
                                 <Card.Body>
                                     {cr.empanswer}<br /><br />
                                     <center><Card.Img style={{ minWidth: "0px", maxWidth: "700px", maxHeight: "700px", borderRadius: '30%' }} src={cr.img_path} /></center>
-                                    <small className="text-muted" style={{ position: 'absolute', right: '10px'}}>{cr.empemail}<SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{cr.createdAt}</SimpleDateTime></small>
+                                    <small className="text-muted" style={{ position: 'absolute', right: '10px' }}>{cr.empemail}<SimpleDateTime dateFormat="DMY" dateSeparator="/" timeSeparator=":">{cr.createdAt}</SimpleDateTime></small>
                                 </Card.Body>
                             </Card>
                         </div>
@@ -96,18 +97,24 @@ function ReadMore() {
     }
 
 
+    let authuser = sessionStorage.getItem('Key_Veriable');
+    console.log(authuser)
+    if (authuser === 'USER') {
+        return (
+            <div className="font" style={{ backgroundColor: "#E8DDE3", height: "200rem" }}>
+                <NavigationBar />
+                <br /><br />
+                <Container >
+                    {view()}
+                    <Link to="/dashbody" onClick={() => localStorage.removeItem('readmore')} >  Go Back</Link>
+                </Container>
 
-    return (
-        <div className="font" style={{ backgroundColor: "#E8DDE3", height: "200rem"  }}>
-            <NavigationBar />
-            <br /><br />
-            <Container >
-                {view()}
-                <Link to="/dashbody" onClick={() => localStorage.removeItem('readmore')} >  Go Back</Link>
-            </Container>
-
-            <br /><br />
-        </div>
-    )
+                <br /><br />
+            </div>
+        )
+    }
+    else {
+        return (<Redirect to="/userlogin" />)
+    }
 }
 export default ReadMore;

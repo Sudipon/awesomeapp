@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from "react-router-dom";
 import NavigationBar from './NavigationBar';
 import Table from 'react-bootstrap/Table'
 
@@ -52,7 +53,9 @@ function ManageAdd() {
       })
   }
 
-  if (status === true) {
+  let authuser = sessionStorage.getItem('Key_Veriable');
+  console.log(authuser)
+  if (authuser === 'ADMIN') {
     return (
       <div className="font"><center>
         <NavigationBar />
@@ -73,9 +76,13 @@ function ManageAdd() {
             {viewConList()}
           </tbody>
         </Table>
-        </center>
+      </center>
       </div>
     )
+  }
+
+  else {
+    return (<Redirect to="/adminlogin" />)
   }
 }
 

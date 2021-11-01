@@ -8,20 +8,20 @@ import "./Home.css";
 function AdminAfterLogin() {
   let authuser = sessionStorage.getItem('Key_Veriable')
   console.log(authuser)
-  if (authuser == null) {
-    return (<Redirect to="/adminlogin" />)
+  if (authuser === 'ADMIN') {
+    return(
+    <div className="font"><center>
+      <NavigationBar />
+      <br />
+      <h1>WELCOME ADMIN</h1>
+      <h2>THIS IS ADMIN DASH BOARD</h2>
+    </center>
+    </div>
+    );
   }
   else {
-    return (
-      <div className="font"><center>
-        <NavigationBar />
-        <br />
-        <h1>WELCOME ADMIN</h1>
-        <h2>THIS IS ADMIN DASH BOARD</h2>
-        </center>
-      </div>
-    )
+  return (<Redirect to="/adminlogin" />)
   }
 }
 
-export default AdminAfterLogin
+export default AdminAfterLogin;

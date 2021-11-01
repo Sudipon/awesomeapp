@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import { Redirect } from "react-router-dom";
 import { NavLink, useHistory, useParams } from 'react-router-dom';
 import "./Body.css";
 import "./Navbar.css";
@@ -253,7 +254,6 @@ function Dashbody(props) {
   let authuser = sessionStorage.getItem('Key_Veriable')
   // console.log(authuser)
   if (authuser === 'USER') {
-    // let email = sessionStorage.getItem('useremail')
     return (
       <div className="font" >
         <NavigationBar />
@@ -298,6 +298,9 @@ function Dashbody(props) {
         </Row>
       </div>
     );
+  }
+  else if(authuser === 'ADMIN'){
+  return (<Redirect to="/userlogin" />)
   }
 
   else {

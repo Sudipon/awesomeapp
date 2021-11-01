@@ -65,7 +65,7 @@ function Add(props){
                 <br />
                 
                 <textarea value={equestion} placeholder="Enter Your Question" className="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
-                    onChange={onChangeEmpQuestion} rows="3" >
+                    onChange={onChangeEmpQuestion} rows="3" required>
                 </textarea>
                 <br />
 

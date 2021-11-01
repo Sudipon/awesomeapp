@@ -4,6 +4,7 @@ import { Button, Row, Form, Col, Modal } from 'react-bootstrap';
 import NavigationBar from './NavigationBar';
 import './Navbar.css';
 import "./Home.css";
+import { Redirect } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
 
 
@@ -12,7 +13,7 @@ function Update() {
 
   return (
     <>
-      <Button variant="primary" onClick={() => setModalShow(true)} style={{fontSize: '18px'}}>
+      <Button variant="primary" onClick={() => setModalShow(true)} style={{ fontSize: '18px' }}>
         Update Your Profile
       </Button>
 
@@ -98,23 +99,23 @@ function UpdateProfile(props) {
             <div className="form-group">
               <input type="text" value={ename} disabled className="form-control " />
             </div>
-            
+
             <div className="form-group">
               <input type="email" value={eemail} disabled className="form-control" />
             </div>
-            
+
             <div className="form-group">
               <input type="number" value={emobile} className="form-control"
                 onChange={onChangeEmpMobile} placeholder="Enter Mobile No"
                 required />
             </div>
-            
+
             <div className="form-group">
               <input type="password" value={epass} className="form-control"
                 onChange={onChangeEmpPass} placeholder="Enter Password"
                 required />
             </div>
-            
+
             <input type="submit" className="btn btn-success" value="Update" onClick={props.onHide} />
           </form>
         </Modal.Body>
@@ -183,81 +184,86 @@ function Profile(props) {
     })
   };
 
+  let authuser = sessionStorage.getItem('Key_Veriable');
+  console.log(authuser)
+  if (authuser === 'USER')
+    return (
+      <div className="font">
+        <NavigationBar />
+        <br />
+        <Row className="d-flex justify-content-center py-3">
+          <h3 className="d-flex justify-content-center w-100 " >My Profile</h3>
+        </Row>
+        <Row>
+          <Col>
+            <div className="container"  >
+              <div className="card carddesign " >
+                <div className="p-4">
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                      {/* <label>Name:</label>       */}
+                      <input type="name" className=" form-control form-round" value={name} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Email:</label> */}
+                      <input type="email" className=" form-control form-round" value={email} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="number" className=" form-control form-round" value={mobile} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="text" className=" form-control form-round" value={dob} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="text" className=" form-control form-round" value={pass} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="text" className=" form-control form-round" value={gender} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="text" className=" form-control form-round" value={country} />
+                    </div>
+                    <div className="form-group">
+                      {/* <label>Mobile Number:</label> */}
+                      <input type="text" className=" form-control form-round" value={address} />
+                    </div>
+                    <Update />
 
-  return (
-    <div className="font">
-      <NavigationBar />
-      <br />
-      <Row className="d-flex justify-content-center py-3">
-        <h3 className="d-flex justify-content-center w-100 " >My Profile</h3>
-      </Row>
-      <Row>
-        <Col>
-          <div className="container"  >
-            <div className="card carddesign " >
-              <div className="p-4">
-                <form onSubmit={handleSubmit}>
-                  <div className="form-group">
-                    {/* <label>Name:</label>       */}
-                    <input type="name" className=" form-control form-round" value={name}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Email:</label> */}
-                    <input type="email" className=" form-control form-round" value={email}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="number" className=" form-control form-round" value={mobile}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={dob}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={pass}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={gender}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={country}/>
-                  </div>
-                  <div className="form-group">
-                    {/* <label>Mobile Number:</label> */}
-                    <input type="text" className=" form-control form-round" value={address}/>
-                  </div>
-                  <Update />
-
-                </form>
+                  </form>
+                </div>
               </div>
+
             </div>
+          </Col>
+          <Col>
+            <Row className="d-flex justify-content-center py-3">
+              <h3 className="d-flex justify-content-center w-100 " >All Uploaded Questions</h3>
+            </Row>
+            <Row>
+              <Table responsive="sm" striped bordered hover>
+                <thead>
+                  <tr>
+                    <th style={{ fontSize: '18px' }}>Questions</th>
+                    <th style={{ fontSize: '18px' }}>Registration Time</th>
+                  </tr>
+                </thead>
 
-          </div>
-        </Col>
-        <Col>
-          <Row className="d-flex justify-content-center py-3">
-            <h3 className="d-flex justify-content-center w-100 " >All Uploaded Questions</h3>
-          </Row>
-          <Row>
-            <Table responsive="sm" striped bordered hover>
-              <thead>
-                <tr>
-                  <th style={{fontSize: '18px'}}>Questions</th>
-                  <th style={{fontSize: '18px'}}>Registration Time</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {viewquestions()}
-              </tbody>
-            </Table>
-          </Row>
-        </Col>
-      </Row>
-    </div>
-  );
+                <tbody>
+                  {viewquestions()}
+                </tbody>
+              </Table>
+            </Row>
+          </Col>
+        </Row>
+      </div>
+    );
+  else {
+    return (<Redirect to="/userlogin" />)
+  }
 }
 export default Profile;

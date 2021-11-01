@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from "react-router-dom";
 import NavigationBar from './NavigationBar';
 import UpdateProfile from './UpdateProfile_Hooks'
 import Table from 'react-bootstrap/Table'
@@ -55,7 +56,9 @@ function ManageMes() {
       })
   }
 
-  if (status === true) {
+  let authuser = sessionStorage.getItem('Key_Veriable');
+  console.log(authuser)
+  if (authuser === 'ADMIN') {
     return (
       <div className="font"><center>
         <NavigationBar />
@@ -76,17 +79,12 @@ function ManageMes() {
             {viewConList()}
           </tbody>
         </Table>
-        </center>
+      </center>
       </div>
     )
   }
   else {
-    return (
-      <div><center>
-        <UpdateProfile email={empemailid} />
-        </center>
-      </div>
-    )
+    return (<Redirect to="/adminlogin" />)
   }
 }
 

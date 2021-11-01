@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from "react-router-dom";
 import NavigationBar from './NavigationBar';
 // import 'bootstrap/dist/css/bootstrap.css';
 import './Navbar.css';
@@ -96,8 +97,10 @@ function viewquestions() {
       })
   }
 
-
-  if (status === false) {
+  let authuser = sessionStorage.getItem('Key_Veriable');
+  console.log(authuser)
+  if (authuser === 'ADMIN'){
+    if (status === false) {
     return (
     <div className="font"><center>
       <NavigationBar />
@@ -161,6 +164,10 @@ function viewquestions() {
       </div>
     )
   }
+}
+else{
+  return (<Redirect to="/adminlogin" />)
+}
 }
 
 export default Search

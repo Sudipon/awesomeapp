@@ -82,12 +82,12 @@ function UserLogin(props) {
               <form onSubmit={handleSubmit}>
                 <div className="form-outline mb-4">
                   <input type="email" className="form-control form-control-lg"
-                   onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Email Address"/>
+                   onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Email Address" required/>
                 </div>
 
                 <div className="form-outline mb-4">
                   <input type="password" class="form-control form-control-lg" 
-                  onChange={onChangeEmpPass} value={epass} placeholder="Enter Password"/>
+                  onChange={onChangeEmpPass} value={epass} placeholder="Enter Password" required/>
                 </div>
 
                 <input type="submit" className="btn btn-primary btn-lg btn-block" value="Sign in"/>

@@ -7,15 +7,15 @@ import "./Home.css";
 function UserAfterLogin() {
   let authuser = sessionStorage.getItem('Key_Veriable')
   console.log(authuser)
-  if (authuser == null) {
-    return (<Redirect to="/userlogin" />)
-  }
-  else {
+  if (authuser === 'USER') {
     return (
       <div className="font">
         <Dashbody />
       </div>
     )
+  }
+  else {
+  return (<Redirect to="/userlogin" />)
   }
 }
 
