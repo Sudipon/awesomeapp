@@ -134,7 +134,7 @@ function Ans(props) {
                                                     <div className="d-flex flex-row align-items-center mb-4">
                                                         <div className="form-outline flex-fill mb-0">
                                                             <textarea type="text" className="form-control" value={eanswer} placeholder="Enter Your Answer" style={{fontSize: '18px'}}
-                                                                onChange={onChangeEmpAnswer} required></textarea>
+                                                                onChange={onChangeEmpAnswer} required   ></textarea>
                                                         </div>
                                                     </div>
 

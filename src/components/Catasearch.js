@@ -65,7 +65,7 @@ function Catasearch(props) {
 
             })
             .catch(err => {
-                setMsg("No news found on this catagory")
+                setMsg("No questions found on this catagory")
             })
 
         setCat('')

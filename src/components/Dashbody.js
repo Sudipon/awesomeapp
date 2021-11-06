@@ -8,6 +8,7 @@ import NavigationBar from './NavigationBar';
 import SimpleDateTime from 'react-simple-timestamp-to-date';
 import { Col, Container, Row, Button, Card, Modal } from 'react-bootstrap';
 
+
 function Addanswer(props) {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -130,7 +131,7 @@ function Answer(props) {
               required />
             <br />
 
-            <textarea value={que} disabled  className="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
+            <textarea value={que} disabled className="form-control " id="exampleInputEmail1" aria-describedby="emailHelp"
               rows="3" >
             </textarea>
             <br />
@@ -222,11 +223,12 @@ function Dashbody(props) {
 
   }, [])
 
+
   function viewquestions() {
     return quelist.map((currentrow, index) => {
       console.log(currentrow)
       return (
-        <Card className="gradient-custom-4" style={{ width: "45rem", height: "16rem", backgroundColor: "#f5f5f5"}}>
+        <Card className="gradient-custom-4" style={{ width: "45rem", height: "16rem", backgroundColor: "#f5f5f5" }}>
           <Card.Body>
             <div className="blog-post">
               <div className="down-content">
@@ -243,7 +245,9 @@ function Dashbody(props) {
         </Card>
       )
     })
+
   }
+
 
   function readmore(index) {
     var temp = [...quelist];
@@ -257,9 +261,9 @@ function Dashbody(props) {
     return (
       <div className="font" >
         <NavigationBar />
-        <Row style={{paddingTop: "50px"}}>
+        <Row style={{ paddingTop: "50px" }}>
           <Col>
-            <div className="sidebar-item categories" style={{paddingLeft:"8rem", paddingTop:"3rem"}}>
+            <div className="sidebar-item categories" style={{ paddingLeft: "8rem", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Categories</h2>
               </div>
@@ -278,7 +282,7 @@ function Dashbody(props) {
             {viewquestions()}
           </Col>
           <Col>
-            <div className="sidebar-item tags" style={{paddingLeft:"50px", paddingTop:"3rem"}}>
+            <div className="sidebar-item tags" style={{ paddingLeft: "50px", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Tag Clouds</h2>
               </div>
@@ -299,17 +303,17 @@ function Dashbody(props) {
       </div>
     );
   }
-  else if(authuser === 'ADMIN'){
-  return (<Redirect to="/userlogin" />)
+  else if (authuser === 'ADMIN') {
+    return (<Redirect to="/userlogin" />)
   }
 
   else {
     return (
       <div className="font">
         <NavigationBar />
-        <Row style={{paddingTop: "50px"}}>
+        <Row style={{ paddingTop: "50px" }}>
           <Col>
-            <div className="sidebar-item categories" style={{paddingLeft:"8rem", paddingTop:"3rem"}}>
+            <div className="sidebar-item categories" style={{ paddingLeft: "8rem", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Categories</h2>
               </div>
@@ -328,7 +332,7 @@ function Dashbody(props) {
             {viewquestions()}
           </Col>
           <Col>
-            <div className="sidebar-item tags" style={{paddingLeft:"50px", paddingTop:"3rem"}}>
+            <div className="sidebar-item tags" style={{ paddingLeft: "50px", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Tag Clouds</h2>
               </div>

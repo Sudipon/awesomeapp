@@ -70,7 +70,7 @@ function UpdateProfile(props) {
     axios.get('https://question-backend.herokuapp.com/emp/search/' + empemailid)
       .then(response => {
         console.log(response.data)
-        const { empname, empemail, empmobile, emppass, empaddress } = response.data[0]
+        const { empname, empemail, empmobile, emppass } = response.data[0]
         setEmpName(empname)
         setEmpEmail(empemail)
         setEmpmobile(empmobile)
