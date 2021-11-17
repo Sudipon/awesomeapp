@@ -27,6 +27,10 @@ import { Route } from 'react-router-dom';
 import Registration from './components/Registration_Hooks';
 import ReadMore from './components/ReadMore';
 import Catasearch from './components/Catasearch';
+import Food from './components/Food';
+import Science from './components/Science';
+import Nature from './components/Nature';
+import Politics from './components/Politics';
 
 
 const App = () => {
@@ -88,6 +92,18 @@ const App = () => {
       </Route>
       <Route path="/readmore/:qid">
         <ReadMore />
+      </Route>
+      <Route path="/food">
+        <Food />
+      </Route>
+      <Route path="/science">
+        <Science />
+      </Route>
+      <Route path="/nature">
+        <Nature />
+      </Route>
+      <Route path="/politics">
+        <Politics />
       </Route>
       <Route path="/adminlogin" component={AdminLogin} />
           <Route path="/adminafterlogin" component={AdminAfterLogin} /> 

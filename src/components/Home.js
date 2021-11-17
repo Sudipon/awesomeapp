@@ -10,7 +10,7 @@ import search2 from '../components/static/search2.svg';
 // import Modal from 'react-bootstrap/Modal';
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
-import { Modal, Button, Navbar, Form, FormControl, Nav } from 'react-bootstrap';
+import { Modal, Button, Navbar, Form, FormControl, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function Addquestion() {
@@ -110,47 +110,49 @@ function Home() {
     console.log(name)
     return (
       <div className="font">
-        <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" >
-            <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
-              <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
-              <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
-              <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
-              <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
-              <Addquestion />
-              <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
-            </Nav>
-            <Nav>
-              <h4 style={{marginRight: '1rem'}}>{name}</h4>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <div className="what">
-          <a><b>What is your Question?</b></a>
-        </div>
-        <br />
-
-        <div>
-          <section className="bg-repeat-x bg-center">
-            <img src={Summer} style={{ width: "auto", height: "600px" }} />
-          </section>
-        </div>
-        <div>
-          <div className="container">
-            <section>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏠</span><span className="text-xs text-primaryText">Home</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Science</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">➗</span><span className="text-xs text-primaryText">Math and Arithmetic</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🌎</span><span className="text-xs text-primaryText">History</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📖</span><span className="text-xs text-primaryText">Literature and Language</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📱</span><span className="text-xs text-primaryText">Technology</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Health</span></div></NavLink>
-            </section>
-
+        <Container>
+          <Navbar collapseOnSelect expand="lg">
+            <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" >
+              <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+                <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
+                <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
+                <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+                <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
+                <Addquestion />
+                <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
+              </Nav>
+              <Nav>
+                <h4 style={{ marginRight: '1rem' }}>{name}</h4>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <div className="what">
+            <a><b>What is your Question?</b></a>
           </div>
-        </div>
+          <br />
+
+          <div>
+            <section className="bg-repeat-x bg-center">
+              <img src={Summer} style={{ width: "auto", height: "600px" }} />
+            </section>
+          </div>
+          <div>
+            <div className="container">
+              <section>
+                <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏠</span><span className="text-xs text-primaryText">Home</span></div></NavLink>
+                <NavLink to="/science"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Science</span></div></NavLink>
+                <NavLink to="/nature"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🌎</span><span className="text-xs text-primaryText">Nature</span></div></NavLink>
+                <NavLink to="/politics"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📖</span><span className="text-xs text-primaryText">Politics</span></div></NavLink>
+                <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📱</span><span className="text-xs text-primaryText">Programming</span></div></NavLink>
+                <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Health</span></div></NavLink>
+                <NavLink to="/food"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Food</span></div></NavLink>
+              </section>
+
+            </div>
+          </div>
+        </Container>
       </div>
     )
   }
@@ -158,49 +160,51 @@ function Home() {
   else {
     return (
       <div className="font">
-        <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" >
-            <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
-              <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
-              <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
-              <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
-              <div className="dropdown">
-                <Nav.Link className="dropbtn" style={{ color: 'Blue' }}>User</Nav.Link>
-                <div className="dropdown-content">
-                  <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
-                  <Nav.Link as={Link} to="/register" style={{ color: 'Blue' }}>Register</Nav.Link>
+        <Container>
+          <Navbar collapseOnSelect expand="lg">
+            <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav" >
+              <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
+                <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
+                <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
+                <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+                <div className="dropdown">
+                  <Nav.Link className="dropbtn" style={{ color: 'Blue' }}>User</Nav.Link>
+                  <div className="dropdown-content">
+                    <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
+                    <Nav.Link as={Link} to="/register" style={{ color: 'Blue' }}>Register</Nav.Link>
+                  </div>
                 </div>
-              </div>
-              <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <div className="what">
-          <a><b>What is your Question?</b></a>
-        </div>
-        <div>
-          <section className="bg-repeat-x bg-center">
-            <img src={Summer} style={{ width: "auto", height: "600px" }} />
-          </section>
-        </div>
-        <div>
-          <div className="container">
-            <section>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏠</span><span className="text-xs text-primaryText">Home</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Science</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">➗</span><span className="text-xs text-primaryText">Math and Arithmetic</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🌎</span><span className="text-xs text-primaryText">History</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📖</span><span className="text-xs text-primaryText">Literature and Language</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📱</span><span className="text-xs text-primaryText">Technology</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Health</span></div></NavLink>
-              <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏆</span><span className="text-xs text-primaryText">Leaderboard</span></div></NavLink>
-            </section>
-
+                <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <div className="what">
+            <a><b>What is your Question?</b></a>
           </div>
-        </div>
+          <div>
+            <section className="bg-repeat-x bg-center">
+              <img src={Summer} style={{ width: "auto", height: "600px" }} />
+            </section>
+          </div>
+          <div>
+            <div className="container">
+              <section>
+                <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏠</span><span className="text-xs text-primaryText">Home</span></div></NavLink>
+                <NavLink to="/science"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Science</span></div></NavLink>
+                <NavLink to="/nature"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🌎</span><span className="text-xs text-primaryText">Nature</span></div></NavLink>
+                <NavLink to="/politics"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📖</span><span className="text-xs text-primaryText">Politics</span></div></NavLink>
+                <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📱</span><span className="text-xs text-primaryText">Programming</span></div></NavLink>
+                <NavLink to="/dashbody"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Health</span></div></NavLink>
+                <NavLink to="/food"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Food</span></div></NavLink>
+              </section>
+
+            </div>
+          </div>
+        </Container>
       </div>
+
     );
   }
 }

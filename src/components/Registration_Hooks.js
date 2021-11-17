@@ -129,7 +129,7 @@ function Registration(props) {
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Username" required />
+                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Your Name" required />
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="email" className="form-control form-control-lg"

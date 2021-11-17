@@ -260,18 +260,19 @@ function Dashbody(props) {
   if (authuser === 'USER') {
     return (
       <div className="font" >
+        <Container>
         <NavigationBar />
         <Row style={{ paddingTop: "50px" }}>
           <Col>
-            <div className="sidebar-item categories" style={{ paddingLeft: "8rem", paddingTop: "3rem" }}>
+            <div className="sidebar-item categories" style={{ paddingLeft: "5rem", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Categories</h2>
               </div>
               <div className="content">
                 <ul>
-                  <li><a href="#">- Food</a></li>
-                  <li><a href="#">- Politics</a></li>
-                  <li><a href="#">- Nature</a></li>
+                  <li><a href="/food">- Food</a></li>
+                  <li><a href="/politics">- Politics</a></li>
+                  <li><a href="/nature">- Nature</a></li>
                   <li><a href="#">- Programming</a></li>
                   <li><a href="#">- Intelligence</a></li>
                 </ul>
@@ -294,12 +295,12 @@ function Dashbody(props) {
                   <li><a href="#">Dollar</a></li>
                   <li><a href="#">Motivation</a></li>
                   <li><a href="#">Indian Share Market</a></li>
-                  <li><a href="#">Responsive</a></li>
                 </ul>
               </div>
             </div>
           </Col>
         </Row>
+        </Container>
       </div>
     );
   }
@@ -310,18 +311,19 @@ function Dashbody(props) {
   else {
     return (
       <div className="font">
+        <Container>
         <NavigationBar />
         <Row style={{ paddingTop: "50px" }}>
           <Col>
-            <div className="sidebar-item categories" style={{ paddingLeft: "8rem", paddingTop: "3rem" }}>
+            <div className="sidebar-item categories" style={{ paddingLeft: "5rem", paddingTop: "3rem" }}>
               <div className="sidebar-heading">
                 <h2>Categories</h2>
               </div>
               <div className="content">
                 <ul>
-                  <li><a href="#">- Food</a></li>
-                  <li><a href="#">- Politics</a></li>
-                  <li><a href="#">- Nature</a></li>
+                  <li><a href="/food">- Food</a></li>
+                  <li><a href="/politics">- Politics</a></li>
+                  <li><a href="/nature">- Nature</a></li>
                   <li><a href="#">- Programming</a></li>
                   <li><a href="#">- Intelligence</a></li>
                 </ul>
@@ -344,12 +346,12 @@ function Dashbody(props) {
                   <li><a href="#">Dollar</a></li>
                   <li><a href="#">Motivation</a></li>
                   <li><a href="#">Indian Share Market</a></li>
-                  <li><a href="#">Responsive</a></li>
                 </ul>
               </div>
             </div>
           </Col>
         </Row>
+        </Container>
       </div>
     );
   }
