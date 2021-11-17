@@ -78,7 +78,7 @@ function Catasearch(props) {
                 <Col>
                     <div>
                         <center><p>{currentrow.empcatagory}</p></center>
-                        <Card style={{ height: "16rem" }}>
+                        <Card className="gradient-custom-4" style={{ height: "16rem" }}>
                             <Card.Body>
                                 <div className="blog-post">
                                     <div className="down-content">

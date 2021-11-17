@@ -111,7 +111,7 @@ function Home() {
     return (
       <div className="font">
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
@@ -147,7 +147,6 @@ function Home() {
               <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📖</span><span className="text-xs text-primaryText">Literature and Language</span></div></NavLink>
               <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">📱</span><span className="text-xs text-primaryText">Technology</span></div></NavLink>
               <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🧪</span><span className="text-xs text-primaryText">Health</span></div></NavLink>
-              <NavLink to="/userafterlogin"><div className="border border-solid border-primaryLight p-1 pr-2 pl-2 rounded flex-col m-2 cursor-pointer pl-4 pr-4 py-2"><span className="topicEmoji">🏆</span><span className="text-xs text-primaryText">Leaderboard</span></div></NavLink>
             </section>
 
           </div>
@@ -160,7 +159,7 @@ function Home() {
     return (
       <div className="font">
         <Navbar collapseOnSelect expand="lg">
-          <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+          <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav" >
             <Nav className="me-auto" style={{ marginLeft: '2rem' }}>

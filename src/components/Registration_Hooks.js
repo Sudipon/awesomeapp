@@ -91,22 +91,22 @@ function Registration(props) {
         setEmpAddress('')
 
     }
-    
+
     return (
         <div className="font"><center>
-            
-      <Navbar collapseOnSelect expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav" >
-          <Nav className="me-auto" style={{marginLeft: '2rem'}} >
-            <Nav.Link as={Link} to="/about" style={{color: 'Blue'}}>About Us</Nav.Link>
-            <Nav.Link as={Link} to="/contact" style={{color: 'Blue'}}>Contact Us</Nav.Link>
-            <Nav.Link as={Link} to="/userlogin" style={{color: 'Blue'}}>Login</Nav.Link>
-            <Nav.Link as={Link} to="/adminlogin" style={{color: 'Blue'}}>Admin</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+
+            <Navbar collapseOnSelect expand="lg">
+                <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav" >
+                    <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+                        <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
+                        <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+                        <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
+                        <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
             <section className="h-100 bg-dark">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -117,7 +117,7 @@ function Registration(props) {
                                         <img
                                             src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/img4.jpg"
                                             alt="Sample photo"
-                                            className="img-fluid" style={{height: '55rem', width: '55rem'}}
+                                            className="img-fluid" style={{ height: '55rem', width: '55rem' }}
                                         />
                                     </div>
                                     <div className="col-xl-6">
@@ -125,47 +125,51 @@ function Registration(props) {
                                             <h3 className="mb-5 text-uppercase" >Registration form</h3>
                                             <form onSubmit={handleSubmit}>
                                                 <div className="form-outline mb-4">
-                                                    <input type="file" className="form-control" placeholder="Image link" onChange={handleImage}/>
+                                                    <input type="file" className="form-control" placeholder="Image link" onChange={handleImage} />
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Your Name" required/>
+                                                        onChange={onChangeEmpName} value={ename} placeholder="Enter Username" required />
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="email" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Your Email Id" required/>
+                                                        onChange={onChangeEmpEmail} value={eemail} placeholder="Enter Your Email Id" required />
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="number" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpMobile} value={emobile} placeholder="Enter Your Mobile Number" required/>
+                                                        onChange={onChangeEmpMobile} value={emobile} placeholder="Enter Your Mobile Number" required />
                                                 </div>
                                                 <div className="form-outline mb-4">
                                                     <input type="password" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpPass} value={epass} placeholder="Enter Your Password" required/>
+                                                        onChange={onChangeEmpPass} value={epass} placeholder="Enter Your Password" required />
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="date" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpDOB} value={edob} placeholder="Enter Your Date of Birth" required/>
+                                                        onChange={onChangeEmpDOB} value={edob} placeholder="Enter Your Date of Birth" required />
+                                                </div>
+
+                                                <div className="form-outline mb-4">
+                                                    <select type="text" className="form-control form-control-lg" onChange={onChangeEmpGender} value={egender} required>
+                                                        <option name="male">Select your gender</option>
+                                                        <option name="male"> Male</option>
+                                                        <option name="female">Female</option>
+                                                        <option name="others">Others</option>
+                                                    </select>
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpGender} value={egender} placeholder="Enter Your Gender" required/>
+                                                        onChange={onChangeEmpCountry} value={ecountry} placeholder="Enter Your Country" required />
                                                 </div>
 
                                                 <div className="form-outline mb-4">
                                                     <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpCountry} value={ecountry} placeholder="Enter Your Country" required/>
-                                                </div>
-
-                                                <div className="form-outline mb-4">
-                                                    <input type="text" className="form-control form-control-lg"
-                                                        onChange={onChangeEmpAddress} value={eaddress} placeholder="Enter Your Address" required/>
+                                                        onChange={onChangeEmpAddress} value={eaddress} placeholder="Enter Your Address" required />
                                                 </div>
 
                                                 <div className="d-flex justify-content-end pt-3">
-                                                    <input type="submit" value="REGISTER" className="btn btn-success"/>
+                                                    <input type="submit" value="REGISTER" className="btn btn-success" />
                                                 </div>
                                             </form>
                                         </div>
