@@ -31,6 +31,9 @@ import Food from './components/Food';
 import Science from './components/Science';
 import Nature from './components/Nature';
 import Politics from './components/Politics';
+import Programming from './components/Programming';
+import Health from './components/Health';
+import Intelligence from './components/Intelligence';
 
 
 const App = () => {
@@ -104,6 +107,15 @@ const App = () => {
       </Route>
       <Route path="/politics">
         <Politics />
+      </Route>
+      <Route path="/programming">
+        <Programming />
+      </Route>
+      <Route path="/health">
+        <Health />
+      </Route>
+      <Route path="/intelligence">
+        <Intelligence />
       </Route>
       <Route path="/adminlogin" component={AdminLogin} />
           <Route path="/adminafterlogin" component={AdminAfterLogin} /> 

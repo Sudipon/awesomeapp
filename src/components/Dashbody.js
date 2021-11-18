@@ -273,8 +273,8 @@ function Dashbody(props) {
                   <li><a href="/food">- Food</a></li>
                   <li><a href="/politics">- Politics</a></li>
                   <li><a href="/nature">- Nature</a></li>
-                  <li><a href="#">- Programming</a></li>
-                  <li><a href="#">- Intelligence</a></li>
+                  <li><a href="/programming">- Programming</a></li>
+                  <li><a href="/intelligence">- Intelligence</a></li>
                 </ul>
               </div>
             </div>
@@ -289,12 +289,12 @@ function Dashbody(props) {
               </div>
               <div className="content">
                 <ul>
-                  <li><a href="#">Amazon</a></li>
-                  <li><a href="#">Cypto Currency</a></li>
-                  <li><a href="#">Elon Musk</a></li>
-                  <li><a href="#">Dollar</a></li>
-                  <li><a href="#">Motivation</a></li>
-                  <li><a href="#">Indian Share Market</a></li>
+                  <li><a href="https://www.quora.com/search?q=amazon">Amazon</a></li>
+                  <li><a href="https://cryptocurrency.quora.com/?q=cryptocu">Cypto Currency</a></li>
+                  <li><a href="https://www.quora.com/search?q=Elon%20Musk">Elon Musk</a></li>
+                  <li><a href="https://www.quora.com/search?q=Dollar">Dollar</a></li>
+                  <li><a href="https://www.quora.com/search?q=Motivation">Motivation</a></li>
+                  <li><a href="https://www.quora.com/search?q=Indian%20share%20market">Indian Share Market</a></li>
                 </ul>
               </div>
             </div>
@@ -324,8 +324,8 @@ function Dashbody(props) {
                   <li><a href="/food">- Food</a></li>
                   <li><a href="/politics">- Politics</a></li>
                   <li><a href="/nature">- Nature</a></li>
-                  <li><a href="#">- Programming</a></li>
-                  <li><a href="#">- Intelligence</a></li>
+                  <li><a href="/programming">- Programming</a></li>
+                  <li><a href="/intelligence">- Intelligence</a></li>
                 </ul>
               </div>
             </div>
@@ -340,12 +340,12 @@ function Dashbody(props) {
               </div>
               <div className="content">
                 <ul>
-                  <li><a href="#">Amazon</a></li>
-                  <li><a href="#">Cypto Currency</a></li>
-                  <li><a href="#">Elon Musk</a></li>
-                  <li><a href="#">Dollar</a></li>
-                  <li><a href="#">Motivation</a></li>
-                  <li><a href="#">Indian Share Market</a></li>
+                  <li><a href="https://www.quora.com/search?q=amazon">Amazon</a></li>
+                  <li><a href="https://cryptocurrency.quora.com/?q=cryptocu">Cypto Currency</a></li>
+                  <li><a href="https://www.quora.com/search?q=Elon%20Musk">Elon Musk</a></li>
+                  <li><a href="https://www.quora.com/search?q=Dollar">Dollar</a></li>
+                  <li><a href="https://www.quora.com/search?q=Motivation">Motivation</a></li>
+                  <li><a href="https://www.quora.com/search?q=Indian%20share%20market">Indian Share Market</a></li>
                 </ul>
               </div>
             </div>
