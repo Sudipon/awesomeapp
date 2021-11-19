@@ -7,7 +7,7 @@ import "./Home.css";
 import facebook from '../components/static/facebook.svg';
 import twitter from '../components/static/twitter.svg';
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
 
@@ -59,7 +59,8 @@ function UserLogin(props) {
   return (
     <div className="font"><center>
 
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" className="fixed-top">
+        <Container>
         <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
@@ -70,7 +71,8 @@ function UserLogin(props) {
             <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+        </Container>
+      </Navbar><br /><br />
       <section className="vh-10" >
         <div className="container py-5 h-100">
           <div className="row d-flex align-items-center justify-content-center h-100">

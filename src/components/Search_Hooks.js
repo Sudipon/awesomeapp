@@ -104,7 +104,7 @@ function viewquestions() {
     return (
     <div className="font"><center>
       <NavigationBar />
-      <br />
+      <br /><br /><br />
       <h3>ENTER EMAIL ID FOR SEARCH</h3><br />
       <b style={{ color: "red" }}>{msg}</b>
       <Card border="dark" style={{ width: '30rem', backgroundColor: 'Grey' }}>
@@ -127,7 +127,7 @@ function viewquestions() {
     return (
       <div className="font"><center>
         <NavigationBar />
-        <br />
+        <br /><br /><br />
 
         <h3>EMPLOYEE DETAILS</h3><br />
         <Table responsive="sm" striped bordered hover>

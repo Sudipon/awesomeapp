@@ -110,8 +110,8 @@ function Home() {
     console.log(name)
     return (
       <div className="font">
-        <Container>
-          <Navbar collapseOnSelect expand="lg">
+          <Navbar collapseOnSelect expand="lg" className="fixed-top">
+            <Container>
             <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" >
@@ -127,7 +127,8 @@ function Home() {
                 <h4 style={{ marginRight: '1rem' }}>{name}</h4>
               </Nav>
             </Navbar.Collapse>
-          </Navbar>
+            </Container>
+          </Navbar><br /><br />
           <div className="what">
             <a><b>What is your Question?</b></a>
           </div>
@@ -152,7 +153,6 @@ function Home() {
 
             </div>
           </div>
-        </Container>
       </div>
     )
   }
@@ -160,8 +160,8 @@ function Home() {
   else {
     return (
       <div className="font">
-        <Container>
-          <Navbar collapseOnSelect expand="lg">
+          <Navbar collapseOnSelect expand="lg" className="fixed-top">
+            <Container>
             <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" >
@@ -179,7 +179,8 @@ function Home() {
                 <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </Navbar>
+            </Container>
+          </Navbar><br /><br />
           <div className="what">
             <a><b>What is your Question?</b></a>
           </div>
@@ -202,7 +203,6 @@ function Home() {
 
             </div>
           </div>
-        </Container>
       </div>
 
     );

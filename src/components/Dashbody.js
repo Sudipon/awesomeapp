@@ -261,7 +261,7 @@ function Dashbody(props) {
     return (
       <div className="font" >
         <Container>
-        <NavigationBar />
+        <NavigationBar /><br /><br />
         <Row style={{ paddingTop: "50px" }}>
           <Col>
             <div className="sidebar-item categories" style={{ paddingLeft: "5rem", paddingTop: "3rem" }}>
@@ -312,7 +312,7 @@ function Dashbody(props) {
     return (
       <div className="font">
         <Container>
-        <NavigationBar />
+        <NavigationBar /><br /><br />
         <Row style={{ paddingTop: "50px" }}>
           <Col>
             <div className="sidebar-item categories" style={{ paddingLeft: "5rem", paddingTop: "3rem" }}>

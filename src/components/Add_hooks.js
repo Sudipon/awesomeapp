@@ -46,7 +46,7 @@ function Add(props){
 
     return (
         <div className="font"><center>
-           <NavigationBar />
+           <NavigationBar /><br /><br />
             <br />
             <br />
             <h3>Add Your Question</h3>

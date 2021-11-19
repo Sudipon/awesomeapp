@@ -103,7 +103,7 @@ function ReadMore() {
         return (
             <div className="font" style={{ backgroundColor: "#E8DDE3", height: "200rem" }}>
                 <NavigationBar />
-                <br /><br />
+                <br /><br /><br /><br />
                 <Container >
                     {view()}
                     <Link to="/dashbody" onClick={() => localStorage.removeItem('readmore')} >  Go Back</Link>

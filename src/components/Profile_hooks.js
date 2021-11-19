@@ -190,7 +190,7 @@ function Profile(props) {
     return (
       <div className="font">
         <NavigationBar />
-        <br />
+        <br /><br /><br />
         <Row className="d-flex justify-content-center py-3">
           <h3 className="d-flex justify-content-center w-100 " >My Profile</h3>
         </Row>

@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Navbar.css';
 import "./Home.css";
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
 
@@ -95,7 +95,8 @@ function Registration(props) {
     return (
         <div className="font"><center>
 
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="lg" className="fixed-top">
+                <Container>
                 <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav" >
@@ -106,7 +107,8 @@ function Registration(props) {
                         <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+                </Container>
+            </Navbar><br /><br />
             <section className="h-100 bg-dark">
                 <div className="container py-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">

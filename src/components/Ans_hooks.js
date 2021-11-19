@@ -97,7 +97,7 @@ function Ans(props) {
     if (authuser === 'USER') {
         return (
             <div className="font"><center>
-                <NavigationBar />
+                <NavigationBar /><br /><br />
                 
                 <section className="vh-100" style={{ backgroundColor: "#eee" }}>
                     <div className="container h-100">

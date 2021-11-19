@@ -62,7 +62,7 @@ function ManageMes() {
     return (
       <div className="font"><center>
         <NavigationBar />
-        <br />
+        <br /><br /><br />
         <h3>EMPLOYEE DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
         <Table responsive="sm" striped bordered hover>

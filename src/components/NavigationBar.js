@@ -101,7 +101,8 @@ function NavigationBar() {
   if (authuser === 'ADMIN') {
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="fixed-top">
+          <Container>
           <Navbar.Brand as={Link} to="/adminafterlogin" style={{ marginLeft: '1rem' }}>ADMIN HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
@@ -114,6 +115,7 @@ function NavigationBar() {
               <Nav.Link as={Link} to="/logout" >LOGOUT</Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          </Container>
         </Navbar>
       </>
     )
@@ -124,8 +126,8 @@ function NavigationBar() {
     let name = sessionStorage.getItem('username')
     console.log(name)
     return (
-
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" className="fixed-top" >
+        <Container>
         <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
@@ -140,12 +142,14 @@ function NavigationBar() {
             <h4 style={{ marginRight: '1rem' }}>{name}</h4>
           </Nav>
         </Navbar.Collapse>
+        </Container>
       </Navbar>
     )
   }
   else {
     return (
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" className="fixed-top" >
+        <Container>
         <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
@@ -162,6 +166,7 @@ function NavigationBar() {
             <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        </Container>
       </Navbar>
     )
   }

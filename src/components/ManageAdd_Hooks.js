@@ -58,7 +58,7 @@ function ManageAdd() {
   if (authuser === 'ADMIN') {
     return (
       <div className="font"><center>
-        <NavigationBar />
+        <NavigationBar /><br /><br />
         <br />
         <h3>QUESTIONS DETAILS</h3><br />
         <b style={{ color: "red" }}>{msg}</b>
@@ -86,4 +86,4 @@ function ManageAdd() {
   }
 }
 
-export default ManageAdd
+export default ManageAdd;

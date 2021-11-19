@@ -53,7 +53,7 @@ function Contact() {
 
   return (
     <div className="font">
-      <NavigationBar />
+      <NavigationBar /><br /><br />
       <div >
         <Row className="d-flex justify-content-center py-3">
           <h3 className="d-flex justify-content-center w-100 " >Contact Us</h3>

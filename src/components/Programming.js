@@ -13,7 +13,7 @@ function Programming() {
     return (
         <div className="font">
             <Container>
-                <NavigationBar />
+                <NavigationBar /><br /><br />
                 <div>
                     <img src={Code} style={{ width: "100%", height: "30rem", padding: '1rem' }} />
                 </div>

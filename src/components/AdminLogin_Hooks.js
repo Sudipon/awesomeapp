@@ -4,7 +4,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import './Navbar.css';
 import "./Home.css";
 import { Link } from 'react-router-dom';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 
 
@@ -37,7 +37,8 @@ function AdminLoginHooks(props) {
 
   return (
     <div className="font"><center>
-      <Navbar collapseOnSelect expand="lg">
+      <Navbar collapseOnSelect expand="lg" className="fixed-top">
+        <Container>
         <Navbar.Brand as={Link} to="/" style={{ color: 'Blue', marginLeft: '1rem'}}><h1><b><i>Question</i></b></h1></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" >
@@ -46,7 +47,8 @@ function AdminLoginHooks(props) {
             <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+        </Container>
+      </Navbar><br /><br /><br />
       <section className="vh-100">
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">

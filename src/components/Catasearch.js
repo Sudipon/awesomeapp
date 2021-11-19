@@ -106,7 +106,7 @@ function Catasearch(props) {
     return (
         <div className="font">
                 <NavigationBar />
-                <br />
+                <br /><br /><br />
                 <Row>
                     <Col>
                     <center>

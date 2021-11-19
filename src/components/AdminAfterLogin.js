@@ -11,7 +11,7 @@ function AdminAfterLogin() {
   if (authuser === 'ADMIN') {
     return(
     <div className="font"><center>
-      <NavigationBar />
+      <NavigationBar /><br /><br />
       <br />
       <h1>WELCOME ADMIN</h1>
       <h2>THIS IS ADMIN DASH BOARD</h2>

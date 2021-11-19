@@ -9,7 +9,7 @@ import NavigationBar from "./NavigationBar";
 function About() {
   return (
     <div className="body">
-      <NavigationBar />
+      <NavigationBar /><br /><br />
       <div className="bg-light">
         <div className="container py-5">
           <div className="row h-100 align-items-center py-5">
