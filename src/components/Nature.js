@@ -7,9 +7,40 @@ import './Navbar.css';
 import "./Home.css";
 import Dream from '../components/static/Dream.jpg';
 import { NavLink, useHistory } from 'react-router-dom';
+import Loader from "react-loader-spinner";
+
 
 function Nature() {
+    const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
     return (
         <div className="font">
             <Container>
@@ -61,5 +92,6 @@ These rhinos are now gone forever due to poaching for horns sports as well as th
             </Container>
         </div>
     )
+}
 }
 export default Nature;    

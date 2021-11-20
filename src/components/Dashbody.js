@@ -7,6 +7,8 @@ import "./Navbar.css";
 import NavigationBar from './NavigationBar';
 import SimpleDateTime from 'react-simple-timestamp-to-date';
 import { Col, Container, Row, Button, Card, Modal } from 'react-bootstrap';
+import Loader from "react-loader-spinner";
+
 
 
 function Addanswer(props) {
@@ -207,6 +209,8 @@ function Dashbody(props) {
   let history = useHistory()
   const [quelist, setQueList] = useState([]);
   const [recentlist, setRecentList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
 
   useEffect(() => {
@@ -254,7 +258,34 @@ function Dashbody(props) {
     history.push('/readmore/' + temp[index]._id);
   }
 
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
 
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
   let authuser = sessionStorage.getItem('Key_Veriable')
   // console.log(authuser)
   if (authuser === 'USER') {
@@ -356,6 +387,7 @@ function Dashbody(props) {
     );
   }
 
+}
 }
 
 export default Dashbody;

@@ -5,6 +5,8 @@ import './Navbar.css';
 import "./Home.css";
 import Card from 'react-bootstrap/Card';
 import { useHistory, useParams } from 'react-router-dom';
+import Loader from "react-loader-spinner";
+
 
 function Ans(props) {
     const history = useHistory();
@@ -17,6 +19,8 @@ function Ans(props) {
     const [msg, setMessage] = useState("");
     const [que, setquestion] = useState("");
     const [img_path, setimg_path] = useState("");
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         axios.post('https://question-backend.herokuapp.com/que/' + qid)
@@ -90,6 +94,34 @@ function Ans(props) {
         setimg_path('');
     }
 
+    useEffect(() => {
+        // Loading function to load data or 
+        // fake it using setTimeout;
+        const loadData = async () => {
+    
+          // Wait for two second
+          await new Promise((r) => setTimeout(r, 2000));
+    
+          // Toggle loading state
+          setLoading((loading) => !loading);
+        };
+    
+        loadData();
+      }, [])
+    
+      if (loading) {
+        return (
+          <div>
+            <center>
+              <div style={{paddingTop: '18rem'}}>
+              <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+              </div>
+            </center>
+          </div>
+        )
+      }
+
+      else{
 
 
     let authuser = sessionStorage.getItem('Key_Veriable')
@@ -174,5 +206,5 @@ function Ans(props) {
         )
     }
 }
-
+}
 export default Ans;

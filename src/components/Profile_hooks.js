@@ -6,6 +6,8 @@ import './Navbar.css';
 import "./Home.css";
 import { Redirect } from "react-router-dom";
 import Table from 'react-bootstrap/Table';
+import Loader from "react-loader-spinner";
+
 
 
 function Update() {
@@ -139,6 +141,8 @@ function Profile(props) {
   // let empid = sessionStorage.getItem('empid')
 
   const [quelist, setQueList] = useState([]);
+  const [loading, setLoading] = useState(true);
+
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -183,6 +187,36 @@ function Profile(props) {
       )
     })
   };
+  
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
+
 
   let authuser = sessionStorage.getItem('Key_Veriable');
   console.log(authuser)
@@ -265,5 +299,6 @@ function Profile(props) {
   else {
     return (<Redirect to="/userlogin" />)
   }
+}
 }
 export default Profile;

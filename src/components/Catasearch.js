@@ -103,6 +103,8 @@ function Catasearch(props) {
         history.push('/readmore/' + temp[index]._id);
     }
 
+
+    
     return (
         <div className="font">
                 <NavigationBar />

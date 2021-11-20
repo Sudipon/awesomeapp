@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
 // import TextField from '@material-ui/core/TextField';
 // import Autocomplete, { createFilterOptions } from '@material-ui/lab/Autocomplete';
@@ -12,6 +12,7 @@ import search2 from '../components/static/search2.svg';
 // import Form from 'react-bootstrap/Form';
 import { Modal, Button, Navbar, Form, FormControl, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Loader from "react-loader-spinner";
 
 function Addquestion() {
   const [modalShow, setModalShow] = React.useState(false);
@@ -103,30 +104,62 @@ function Question(props) {
 
 
 function Home() {
-  let authuser = sessionStorage.getItem('Key_Veriable')
-  console.log(authuser)
-  if (authuser === 'USER') {
-    let name = sessionStorage.getItem('username')
-    console.log(name)
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
     return (
-      <div className="font">
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else {
+    let authuser = sessionStorage.getItem('Key_Veriable')
+    console.log(authuser)
+
+    if (authuser === 'USER') {
+      let name = sessionStorage.getItem('username')
+      console.log(name)
+      return (
+        <div className="font">
           <Navbar collapseOnSelect expand="lg" className="fixed-top">
             <Container>
-            <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav" >
-              <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
-                <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
-                <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
-                <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
-                <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
-                <Addquestion />
-                <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
-              </Nav>
-              <Nav>
-                <h4 style={{ marginRight: '1rem' }}>{name}</h4>
-              </Nav>
-            </Navbar.Collapse>
+              <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav" >
+                <Nav className="me-auto" style={{ marginLeft: '2rem' }} >
+                  <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
+                  <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }}>About Us</Nav.Link>
+                  <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+                  <Nav.Link as={Link} to="/profile" style={{ color: 'Blue' }}>Profile</Nav.Link>
+                  <Addquestion />
+                  <Nav.Link as={Link} to="/logout" style={{ color: 'Blue' }}>Logout</Nav.Link>
+                </Nav>
+                <Nav>
+                  <h4 style={{ marginRight: '1rem' }}>{name}</h4>
+                </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar><br /><br />
           <div className="what">
@@ -153,32 +186,32 @@ function Home() {
 
             </div>
           </div>
-      </div>
-    )
-  }
+        </div>
+      )
+    }
 
-  else {
-    return (
-      <div className="font">
+    else {
+      return (
+        <div className="font">
           <Navbar collapseOnSelect expand="lg" className="fixed-top">
             <Container>
-            <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav" >
-              <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
-                <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
-                <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
-                <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
-                <div className="dropdown">
-                  <Nav.Link className="dropbtn" style={{ color: 'Blue' }}>User</Nav.Link>
-                  <div className="dropdown-content">
-                    <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
-                    <Nav.Link as={Link} to="/register" style={{ color: 'Blue' }}>Register</Nav.Link>
+              <Navbar.Brand as={Link} to="/dashbody" style={{ color: 'Blue', marginLeft: '1rem' }}><h1><b><i>Question</i></b></h1></Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav" >
+                <Nav className="me-auto" style={{ marginLeft: '2rem' }}>
+                  <Nav.Link as={Link} to="/catasearch"><img src={search2} width={30} /></Nav.Link>
+                  <Nav.Link as={Link} to="/about" style={{ color: 'Blue' }} >About Us</Nav.Link>
+                  <Nav.Link as={Link} to="/contact" style={{ color: 'Blue' }}>Contact Us</Nav.Link>
+                  <div className="dropdown">
+                    <Nav.Link className="dropbtn" style={{ color: 'Blue' }}>User</Nav.Link>
+                    <div className="dropdown-content">
+                      <Nav.Link as={Link} to="/userlogin" style={{ color: 'Blue' }}>Login</Nav.Link>
+                      <Nav.Link as={Link} to="/register" style={{ color: 'Blue' }}>Register</Nav.Link>
+                    </div>
                   </div>
-                </div>
-                <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
+                  <Nav.Link as={Link} to="/adminlogin" style={{ color: 'Blue' }}>Admin</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
             </Container>
           </Navbar><br /><br />
           <div className="what">
@@ -203,9 +236,10 @@ function Home() {
 
             </div>
           </div>
-      </div>
+        </div>
 
-    );
+      );
+    }
   }
 }
 

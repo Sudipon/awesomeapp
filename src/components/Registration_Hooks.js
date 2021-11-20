@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink, useHistory } from 'react-router-dom';
 import axios from 'axios';
 // import 'bootstrap/dist/css/bootstrap.css';
@@ -7,6 +7,7 @@ import "./Home.css";
 import { Link } from 'react-router-dom';
 import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
+import Loader from "react-loader-spinner";
 
 
 function Registration(props) {
@@ -21,7 +22,8 @@ function Registration(props) {
     const [eaddress, setEmpAddress] = useState("");
     const [msg, setMessage] = useState("");
     const [img_path, setimg_path] = useState("");
-
+  const [loading, setLoading] = useState(true);
+    
 
     const handleImage = async e => {
         e.preventDefault()
@@ -91,6 +93,35 @@ function Registration(props) {
         setEmpAddress('')
 
     }
+
+    useEffect(() => {
+        // Loading function to load data or 
+        // fake it using setTimeout;
+        const loadData = async () => {
+    
+          // Wait for two second
+          await new Promise((r) => setTimeout(r, 2000));
+    
+          // Toggle loading state
+          setLoading((loading) => !loading);
+        };
+    
+        loadData();
+      }, [])
+    
+      if (loading) {
+        return (
+          <div>
+            <center>
+              <div style={{paddingTop: '18rem'}}>
+              <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+              </div>
+            </center>
+          </div>
+        )
+      }
+    
+      else{
 
     return (
         <div className="font"><center>
@@ -186,6 +217,7 @@ function Registration(props) {
         </div>
     )
 }
+}
 
 
-export default Registration
+export default Registration;

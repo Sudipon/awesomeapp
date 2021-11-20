@@ -7,8 +7,40 @@ import './Navbar.css';
 import "./Home.css";
 import Heal from '../components/static/health.jpeg';
 import { NavLink, useHistory } from 'react-router-dom';
+import Loader from "react-loader-spinner";
+
 
 function Health() {
+    const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
 
     return (
         <div className="font">
@@ -63,5 +95,6 @@ Don’t you remember your mother getting on your case for doing that !!</p>
             </Container>
         </div>
     )
+}
 }
 export default Health;    

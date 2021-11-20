@@ -9,6 +9,8 @@ import SimpleDateTime from 'react-simple-timestamp-to-date';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 import { useHistory } from 'react-router-dom';
+import Loader from "react-loader-spinner";
+
 
 function AnswerPanel(props) {
 
@@ -59,6 +61,8 @@ function ReadMore() {
     const { qid } = useParams();
     // console.log(qid);
     const [quelist, setQueList] = useState([]);
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         axios.post('https://question-backend.herokuapp.com/que/' + qid)
@@ -96,25 +100,55 @@ function ReadMore() {
         history.push('/ans/' + temp[index]._id);
     }
 
+    useEffect(() => {
+        // Loading function to load data or 
+        // fake it using setTimeout;
+        const loadData = async () => {
 
-    let authuser = sessionStorage.getItem('Key_Veriable');
-    console.log(authuser)
-    if (authuser === 'USER') {
+            // Wait for two second
+            await new Promise((r) => setTimeout(r, 2000));
+
+            // Toggle loading state
+            setLoading((loading) => !loading);
+        };
+
+        loadData();
+    }, [])
+
+    if (loading) {
         return (
-            <div className="font" style={{ backgroundColor: "#E8DDE3", height: "200rem" }}>
-                <NavigationBar />
-                <br /><br /><br /><br />
-                <Container >
-                    {view()}
-                    <Link to="/dashbody" onClick={() => localStorage.removeItem('readmore')} >  Go Back</Link>
-                </Container>
-
-                <br /><br />
+            <div>
+                <center>
+                    <div style={{ paddingTop: '18rem' }}>
+                        <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+                    </div>
+                </center>
             </div>
         )
     }
+
     else {
-        return (<Redirect to="/userlogin" />)
+
+
+        let authuser = sessionStorage.getItem('Key_Veriable');
+        console.log(authuser)
+        if (authuser === 'USER') {
+            return (
+                <div className="font" style={{ backgroundColor: "#E8DDE3", height: "200rem" }}>
+                    <NavigationBar />
+                    <br /><br /><br /><br />
+                    <Container >
+                        {view()}
+                        <Link to="/dashbody" onClick={() => localStorage.removeItem('readmore')} >  Go Back</Link>
+                    </Container>
+
+                    <br /><br />
+                </div>
+            )
+        }
+        else {
+            return (<Redirect to="/userlogin" />)
+        }
     }
 }
 export default ReadMore;

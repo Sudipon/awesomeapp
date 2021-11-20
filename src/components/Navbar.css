@@ -461,3 +461,10 @@ display-flex, .display-flex, .display-flex-center, .signup-content, .signin-cont
   .navbar{
     position: fixed;
   }
+
+  .pass-wrapper {
+    position: relative;
+    display: flex;
+    margin-bottom: 14px;
+    width: 34rem;
+  }

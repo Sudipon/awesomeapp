@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { Button, Row, Form, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
@@ -6,6 +6,7 @@ import axios from 'axios';
 import './Navbar.css';
 import "./Home.css";
 import NavigationBar from './NavigationBar';
+import Loader from "react-loader-spinner";
 
 function Contact() {
 
@@ -14,6 +15,8 @@ function Contact() {
   const [esubject, setEmpSubject] = useState("");
   const [emessage, setEmpMessage] = useState("");
   const [msg, setMessage] = useState("");
+  const [loading, setLoading] = useState(true);
+
 
   const onChangeEmpName = (e) => setEmpName(e.target.value);
   const onChangeEmpEmail = (e) => setEmpEmail(e.target.value);
@@ -51,6 +54,34 @@ function Contact() {
 
   }
 
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
   return (
     <div className="font">
       <NavigationBar /><br /><br />
@@ -140,5 +171,6 @@ function Contact() {
     </div>
   )
 }
+}
 
-export default Contact
+export default Contact;

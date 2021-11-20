@@ -1,12 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useHistory } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete, { createFilterOptions } from '@material-ui/lab/Autocomplete';
 import "./About.css";
 import NavigationBar from "./NavigationBar";
+import Loader from "react-loader-spinner";
+
 
 
 function About() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Loading function to load data or 
+    // fake it using setTimeout;
+    const loadData = async () => {
+
+      // Wait for two second
+      await new Promise((r) => setTimeout(r, 2000));
+
+      // Toggle loading state
+      setLoading((loading) => !loading);
+    };
+
+    loadData();
+  }, [])
+
+  if (loading) {
+    return (
+      <div>
+        <center>
+          <div style={{paddingTop: '18rem'}}>
+          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+          </div>
+        </center>
+      </div>
+    )
+  }
+
+  else{
   return (
     <div className="body">
       <NavigationBar /><br /><br />
@@ -51,6 +83,7 @@ function About() {
       </footer>
     </div>
   );
+}
 }
 
 export default About;

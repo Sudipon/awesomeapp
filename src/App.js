@@ -34,9 +34,11 @@ import Politics from './components/Politics';
 import Programming from './components/Programming';
 import Health from './components/Health';
 import Intelligence from './components/Intelligence';
+import Reset from './components/Reset';
 
 
 const App = () => {
+  
   return (
     <div className="">
       <Route exact path="/">
@@ -116,6 +118,9 @@ const App = () => {
       </Route>
       <Route path="/intelligence">
         <Intelligence />
+      </Route>
+      <Route path="/reset">
+        <Reset />
       </Route>
       <Route path="/adminlogin" component={AdminLogin} />
           <Route path="/adminafterlogin" component={AdminAfterLogin} /> 
