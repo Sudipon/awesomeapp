@@ -1,17 +1,12 @@
 import React from 'react';
 import Home from './components/Home';
-import Body from './components/Body';
 import About from './components/About';
 import Contact from './components/Contact';
 import Profile from './components/Profile_hooks';
-import Loading from './components/Loading';
 import Dashbody from './components/Dashbody';
-import Delete from './components/Delete_Hooks';
 import Search from './components/Search_Hooks';
-import DisplayAll from './components/DisplayAll_Hooks';
 import Logout from './components/Logout';
 import AdminAfterLogin from './components/AdminAfterLogin';
-import NavigationBar from './components/NavigationBar';
 import AdminLogin from './components/AdminLogin_Hooks';
 import UserLogin from './components/UserLogin_Hooks';
 import UserAfterLogin from './components/UserAfterLogin';
@@ -34,7 +29,7 @@ import Politics from './components/Politics';
 import Programming from './components/Programming';
 import Health from './components/Health';
 import Intelligence from './components/Intelligence';
-import Reset from './components/Reset';
+
 
 
 const App = () => {
@@ -47,9 +42,6 @@ const App = () => {
       <Route exact path="/dashbody">
         <Dashbody />
       </Route>
-      <Route exact path="/body">
-        <Body />
-      </Route>
       <Route path="/about">
         <About />
       </Route>
@@ -61,9 +53,6 @@ const App = () => {
       </Route>
       <Route path="/profile">
         <Profile />
-      </Route>
-      <Route path="/loading">
-        <Loading />
       </Route>
       <Route path="/userlogin">
         <UserLogin />
@@ -119,13 +108,8 @@ const App = () => {
       <Route path="/intelligence">
         <Intelligence />
       </Route>
-      <Route path="/reset">
-        <Reset />
-      </Route>
       <Route path="/adminlogin" component={AdminLogin} />
           <Route path="/adminafterlogin" component={AdminAfterLogin} /> 
-          <Route path="/displayall" component={DisplayAll} /> 
-           <Route path="/delete" component={Delete} />
            <Route path="/search" component={Search} />
            <Route path="/logout" component={Logout} />
            

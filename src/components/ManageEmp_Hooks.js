@@ -33,6 +33,7 @@ function ManageEmp() {
           <td><img src={currentrow.img_path} /></td>
           <td>{currentrow.empemail}</td>
           <td>{currentrow.empmobile}</td>
+          <td>{currentrow.emppass}</td>
           <td>{currentrow.empdob}</td>
           <td>{currentrow.empgender}</td>
           <td>{currentrow.empcountry}</td>
@@ -85,6 +86,7 @@ function ManageEmp() {
                 <th>Images</th>
                 <th>Email</th>
                 <th>Mobile</th>
+                <th>Password</th>
                 <th>DOB</th>
                 <th>Gender</th>
                 <th>Country</th>

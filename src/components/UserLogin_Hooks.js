@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import { Container, Navbar } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Loader from "react-loader-spinner";
+import FacebookLogin from 'react-facebook-login';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
@@ -27,6 +28,10 @@ function UserLogin(props) {
   const togglePasswordVisiblity = () => {
     setPasswordShown(passwordShown ? false : true);
   };
+
+  const responseFacebook = (response) => {
+    console.log(response);
+  }
 
   const onChangeEmpEmail = (e) => setEmpEmail(e.target.value);
   const onChangeEmpPass = (e) => setEmpPass(e.target.value);
@@ -134,17 +139,24 @@ function UserLogin(props) {
                         <i onClick={togglePasswordVisiblity}>{eye}</i>
                       </div>
                     </div>
-                    <Link to="/reset">Forgot password?</Link><br /><br />
-
                     <input type="submit" className="btn btn-primary btn-lg btn-block" value="Sign in" />
 
                     <div className="divider d-flex align-items-center my-4">
                       <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
                     </div>
 
+                    {/* <FacebookLogin
+                      appId="1088597931155576"
+                      autoLoad={true}
+                      fields="name,email,picture"
+                      callback={responseFacebook}
+                      cssClass="my-facebook-button-class"
+                      icon="fa-facebook"
+                      style={{ backgroundColor: '#3b5998', width: '33rem' }}
+                    /> */}
                     <a className="btn btn-primary btn-lg btn-block" style={{ backgroundColor: '#3b5998', width: '33rem' }} href="#!" role="button">
                       <img src={facebook} width={35} />Continue with Facebook
-          </a><br /><br />
+                    </a><br /><br />
                     <a className="btn btn-primary btn-lg btn-block" style={{ backgroundColor: '#55acee', width: '33rem' }} href="#!" role="button">
                       <img src={twitter} width={35} />Continue with Twitter</a>
 

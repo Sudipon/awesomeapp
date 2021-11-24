@@ -13,88 +13,88 @@ import Loader from "react-loader-spinner";
 function Health() {
     const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Loading function to load data or 
-    // fake it using setTimeout;
-    const loadData = async () => {
+    useEffect(() => {
+        // Loading function to load data or 
+        // fake it using setTimeout;
+        const loadData = async () => {
 
-      // Wait for two second
-      await new Promise((r) => setTimeout(r, 2000));
+            // Wait for two second
+            await new Promise((r) => setTimeout(r, 2000));
 
-      // Toggle loading state
-      setLoading((loading) => !loading);
-    };
+            // Toggle loading state
+            setLoading((loading) => !loading);
+        };
 
-    loadData();
-  }, [])
+        loadData();
+    }, [])
 
-  if (loading) {
-    return (
-      <div>
-        <center>
-          <div style={{paddingTop: '18rem'}}>
-          <Loader type="Bars" color="#00BFFF" height={80} width={80} />
-          </div>
-        </center>
-      </div>
-    )
-  }
+    if (loading) {
+        return (
+            <div>
+                <center>
+                    <div style={{ paddingTop: '18rem' }}>
+                        <Loader type="Bars" color="#00BFFF" height={80} width={80} />
+                    </div>
+                </center>
+            </div>
+        )
+    }
 
-  else{
+    else {
 
-    return (
-        <div className="font">
-            <Container>
-                <NavigationBar /><br /><br />
-                <div>
-                    <img src={Heal} style={{ width: "100%", height: "30rem", padding: '1rem' }} />
-                </div>
-                <div className="row">
-                    <div className="col-md-8" style={{ paddingLeft: '2rem', height: '50rem' }}>
-                        <Card className="gradient-custom-4" style={{ height: "20rem" }}>
-                            <Card.Body>
-                                <div className="blog-post">
-                                    <div className="down-content">
-                                        <span>Sudipon Ghosh</span><br />
-                                        <b>Would itching inside you ear canal with your finger cause an ear infection?</b><br />
-                                        <b>Answer: </b>
-                                        <br />
-                                        <p>A person who irritates the inner ear canal rubs off the secreted protective waxes there. This in turn causes the oil/ wax glands inside the ear to secrete MORE wax.
+        return (
+            <div className="font">
+                <Container>
+                    <NavigationBar /><br /><br />
+                    <div>
+                        <img src={Heal} style={{ width: "100%", height: "30rem", padding: '1rem' }} />
+                    </div>
+                    <div className="row">
+                        <div className="col-md-8" style={{ paddingLeft: '2rem', height: '50rem' }}>
+                            <Card className="gradient-custom-4" style={{ height: "20rem" }}>
+                                <Card.Body>
+                                    <div className="blog-post">
+                                        <div className="down-content">
+                                            <span>Sudipon Ghosh</span><br />
+                                            <b>Would itching inside you ear canal with your finger cause an ear infection?</b><br />
+                                            <b>Answer: </b>
+                                            <br />
+                                            <p>A person who irritates the inner ear canal rubs off the secreted protective waxes there. This in turn causes the oil/ wax glands inside the ear to secrete MORE wax.
 
-See what is happening there!!
+                                            See what is happening there!!
 
-It may NOW be infected OR it may be merely irritated. Time will tell !!
+                                            It may NOW be infected OR it may be merely irritated. Time will tell !!
 
-Use this (above) as a first-aid measure and also to kick the urge to stick stuff in your ears.
+                                            Use this (above) as a first-aid measure and also to kick the urge to stick stuff in your ears.
 
 Don’t you remember your mother getting on your case for doing that !!</p>
                                         </div>
+                                    </div>
+                                </Card.Body>
+                            </Card><br />
+                        </div>
+                        <div class="col-md-4">
+                            <div className="sidebar-item tags" style={{ paddingLeft: "10px" }}>
+                                <div className="sidebar-heading">
+                                    <h2>Tag Clouds</h2>
                                 </div>
-                            </Card.Body>
-                        </Card><br />
-                    </div>
-                    <div class="col-md-4">
-                        <div className="sidebar-item tags" style={{ paddingLeft: "10px" }}>
-                            <div className="sidebar-heading">
-                                <h2>Tag Clouds</h2>
-                            </div>
-                            <div className="content">
-                                <ul>
-                                    <li><a href="#">Amazon</a></li>
-                                    <li><a href="#">Cypto Currency</a></li>
-                                    <li><a href="#">Elon Musk</a></li>
-                                    <li><a href="#">Dollar</a></li>
-                                    <li><a href="#">Motivation</a></li>
-                                    <li><a href="#">Indian Share Market</a></li>
+                                <div className="content">
+                                    <ul>
+                                        <li><a href="https://www.quora.com/search?q=amazon">Amazon</a></li>
+                                        <li><a href="https://cryptocurrency.quora.com/?q=cryptocu">Cypto Currency</a></li>
+                                        <li><a href="https://www.quora.com/search?q=Elon%20Musk">Elon Musk</a></li>
+                                        <li><a href="https://www.quora.com/search?q=Dollar">Dollar</a></li>
+                                        <li><a href="https://www.quora.com/search?q=Motivation">Motivation</a></li>
+                                        <li><a href="https://www.quora.com/search?q=Indian%20share%20market">Indian Share Market</a></li>
 
-                                </ul>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </Container>
-        </div>
-    )
-}
+                </Container>
+            </div>
+        )
+    }
 }
 export default Health;    
